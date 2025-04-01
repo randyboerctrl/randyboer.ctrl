@@ -1,4 +1,4 @@
-# My Git & VS Code Notes
+My Git & VS Code Notes
 
 ## 🛠 Git Shortcuts
 - `git add .` → Stage all changes
