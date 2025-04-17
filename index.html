@@ -14,7 +14,9 @@
 
     <section class="learning-log">
         <h2>Learning Log Overview</h2>
-        <table>
+
+        <!-- Table for displaying log -->
+        <table id="learningTable">
             <thead>
                 <tr>
                     <th>Date</th>
@@ -25,40 +27,28 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>March 2025</td>
-                    <td>Japanese</td>
-                    <td>Learned N4 Grammar Points</td>
-                    <td class="completed">Completed</td>
-                    <td class="progress-bar" style="width: 90%"></td>
-                </tr>
-                <tr>
-                    <td>March 2025</td>
-                    <td>Coding</td>
-                    <td>Python Basics (Codecademy)</td>
-                    <td class="in-progress">In Progress</td>
-                    <td class="progress-bar" style="width: 50%"></td>
-                </tr>
-                <tr>
-                    <td>February 2025</td>
-                    <td>Japanese</td>
-                    <td>Kanji: First 50 Characters</td>
-                    <td class="completed">Completed</td>
-                    <td class="progress-bar" style="width: 100%"></td>
-                </tr>
-                <tr>
-                    <td>February 2025</td>
-                    <td>Side Gigs</td>
-                    <td>Started Fiverr Gig for Translation</td>
-                    <td class="in-progress">In Progress</td>
-                    <td class="progress-bar" style="width: 60%"></td>
-                </tr>
+                <!-- Dynamic content will go here -->
             </tbody>
         </table>
+
+        <!-- Form to add new log entries -->
+        <form id="logForm">
+            <input type="date" id="date" required>
+            <input type="text" id="category" placeholder="Category" required>
+            <input type="text" id="goal" placeholder="Goal/Topic" required>
+            <select id="status" required>
+                <option value="Completed">Completed</option>
+                <option value="In Progress">In Progress</option>
+            </select>
+            <input type="number" id="progress" placeholder="Progress %" min="0" max="100" required>
+            <button type="submit">Add Log</button>
+        </form>
     </section>
 
     <footer>
         <p>© 2025 Learning Log - Built with love</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
