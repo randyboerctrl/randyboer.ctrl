@@ -9,6 +9,11 @@ body {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
+
+  .container, .block, section {
+    margin-bottom: 10px; /* Reduce the space between blocks */
+    padding: 5px;        /* Adjust padding inside blocks if needed */
+}
   
   section {
     background-color: rgba(0, 0, 0, 0.8);
