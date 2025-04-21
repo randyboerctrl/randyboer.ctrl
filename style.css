@@ -13,7 +13,7 @@ body {
   section {
     background-color: rgba(0, 0, 0, 0.8);
     margin: 1rem auto;  /* Less outer space, and centers the section */
-    padding: 0.5rem;     /* Less inner space */
+    padding: 0.2rem;     /* Less inner space */
     max-width: 800px;
     text-align: left;
   }
