@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <p style="background-image: url('https://unsplash.com/photos/man-holding-brown-and-black-pen-painting-seashore-8Arw-cEpt-Q');">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Log</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=M3w1NzM5fDB8MHxzZWFyY2h8M3x8c2Vhc2lkZXxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-block {
+      background-color: rgba(0, 0, 0, 0.75);
+      color: white;
+      padding: 2rem;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>My Learning Log</h1>
-        <p>Track my progress in Japanese, Coding, and Side Gigs</p>
-    </header>
-
-    <section class="learning-log">
-        <h2>Learning Log Overview</h2>
-
-        <!-- Table for displaying log -->
-        <table id="learningTable">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Category</th>
-                    <th>Topic/Goal</th>
-                    <th>Status</th>
-                    <th>Progress</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Dynamic content will go here -->
-            </tbody>
-        </table>
-
-        <!-- Form to add new log entries -->
-        <form id="logForm">
-            <input type="date" id="date" required>
-            <input type="text" id="category" placeholder="Category" required>
-            <input type="text" id="goal" placeholder="Goal/Topic" required>
-            <select id="status" required>
-                <option value="Completed">Completed</option>
-                <option value="In Progress">In Progress</option>
-            </select>
-            <input type="number" id="progress" placeholder="Progress %" min="0" max="100" required>
-            <button type="submit">Add Log</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>© 2025 Learning Log - Built with love</p>
-    </footer>
-
-    <script src="scripts.js"></script>
+  <div class="text-block">
+    <h1>Hello, I'm a Dutch Indie Soul</h1>
+    <p>
+      I'm a 37-year-old Dutch guy on a journey to learn Japanese and explore the deeper sides of language and life.  
+      I write stream-of-consciousness lyrics layered over shoegaze and post-punk inspired sounds.  
+      One day soon, I’ll pack my bags and study in Japan for a while — chasing meaning, music, and new perspectives.
+    </p>
+  </div>
 </body>
 </html>
