@@ -35,19 +35,22 @@ p {
 .nav-links a {
   color: white;
   margin: 0 12px;
-  padding: 8px 12px;
-  text-decoration: none;
+  padding: 6px 12px;
   font-family: monospace;
+  font-size: 14px;
+  text-decoration: none;
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  border: 1px solid transparent; /* reserve space for hover bg */
+  box-sizing: border-box;
   display: inline-block;
-  border: 1px solid transparent; /* Reserve space to avoid jump */
+  transition: background-color 0.2s ease;
 }
 
 .nav-links a:hover {
   background-color: black;
   color: white;
-  border: 1px solid transparent; /* Keep border the same on hover */
+  border: 1px solid transparent; /* keeps border consistent */
+  text-decoration: none;
 }
 
 .language-switch-container {
