@@ -1,79 +1,73 @@
-/* Base Styles */
-body {
+/* GENERAL RESET */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: monospace;
-    font-size: 13px;
-    color: white;
-    background-image: url('./images/wallpaper.jpg');
+    background: url('images/wallpaper.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    color: white;
+    font-size: 14px;
     line-height: 1.6;
   }
   
-  /* Container */
-  .container {
+  /* CONTAINER */
+  .wrapper {
     max-width: 800px;
     margin: 0 auto;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   
-  /* Navigation Links */
+  /* NAVIGATION */
   .nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.5rem;
-    padding: 1rem 1rem 0;
-    justify-content: center;
   }
   
   .nav a {
-    background: rgba(0, 0, 0, 0.8);
+    display: block;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 0, 0, 0.75);
     color: white;
     text-decoration: none;
-    padding: 0.4rem 0.8rem;
-    font-size: 12px;
+    text-align: center;
     text-transform: lowercase;
-    border-radius: 3px;
+    border-radius: 4px;
     transition: background 0.3s ease;
   }
   
   .nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.15);
   }
   
-  /* Content Blocks */
+  /* CONTENT BLOCKS */
   .block {
-    background-color: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.75);
     padding: 1rem;
-    max-width: 600px;
-    text-align: left;
-    box-sizing: border-box;
+    border-radius: 4px;
   }
   
+  /* HEADINGS */
   h1 {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 0.5rem;
     text-transform: lowercase;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .container {
-      padding: 2rem 1rem;
-      align-items: center;
+  /* MOBILE RESPONSIVENESS */
+  @media (max-width: 600px) {
+    .wrapper {
+      padding: 1rem;
     }
   
-    .block {
-      max-width: 100%;
-      width: 100%;
-    }
-  
-    .nav {
-      justify-content: center;
+    .nav a {
+      font-size: 14px;
     }
   }
