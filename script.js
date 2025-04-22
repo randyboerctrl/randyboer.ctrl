@@ -1,17 +1,17 @@
-// JavaScript to toggle between translation and original text for Bio only
+// JavaScript to toggle between English and Japanese for Bio only
 function toggleTranslation(blockId) {
     const textContainer = document.querySelector(`#${blockId}-text-container`);
-    const textElement = textContainer.querySelector(`#${blockId}-text`);
-    const translationElement = textContainer.querySelector(`#${blockId}-text-translation`);
+    const englishText = textContainer.querySelector(`#${blockId}-text-english`);
+    const japaneseText = textContainer.querySelector(`#${blockId}-text-japanese`);
     
-    // Toggle visibility only for the Bio block text elements
-    if (textElement && translationElement) {
-      if (textElement.style.display === "none") {
-        textElement.style.display = "block";
-        translationElement.style.display = "none";
+    // Toggle visibility for English and Japanese text
+    if (englishText && japaneseText) {
+      if (englishText.style.display === "none") {
+        englishText.style.display = "block";
+        japaneseText.style.display = "none";
       } else {
-        textElement.style.display = "none";
-        translationElement.style.display = "block";
+        englishText.style.display = "none";
+        japaneseText.style.display = "block";
       }
     }
   }

@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  <!-- Navigation links -->
   <nav class="nav-links">
     <a href="#bio">Bio</a>
     <a href="#currently-learning">Currently Learning</a>
@@ -17,13 +18,14 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Bio Block with translation toggle -->
+  <!-- Bio Block with translation toggle for English <-> Japanese -->
   <div id="bio" class="block">
     <h1>👨‍💻 Bio</h1>
-    <button onclick="toggleTranslation('bio')" class="translate-btn">Translate</button>
+    <!-- Button to toggle between English and Japanese -->
+    <button onclick="toggleTranslation('bio')" class="translate-btn">EN / JP</button>
     <div id="bio-text-container">
-      <p id="bio-text">Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.</p>
-      <p id="bio-text-translation" class="translation-text">Voel je vrij om hier mijn werk te verkennen – ik ben een front-end ontwikkelaar die zich richt op het creëren van schone, intuïtieve systemen die prettig zijn om te gebruiken. Ik neem ook freelance projecten aan, dus als je geïnteresseerd bent in samenwerking, aarzel dan niet om via deze website contact met me op te nemen.</p>
+      <p id="bio-text-english">Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.</p>
+      <p id="bio-text-japanese" class="translation-text">私の作品をここでぜひご覧ください。私は、使いやすく直感的なシステムを作ることに重点を置いているフロントエンド開発者です。フリーランスのプロジェクトも受けているので、もしコラボレーションに興味があれば、このウェブサイトを通じて気軽にお問い合わせください。</p>
     </div>
   </div>
 
