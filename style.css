@@ -9,8 +9,8 @@ body {
 
 .block {
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  margin: 20px auto; /* Less vertical space */
+  padding: 16px; /* slightly tighter */
+  margin: 12px auto; /* tighter vertical space */
   max-width: 800px;
   border-radius: 8px;
 }
@@ -28,8 +28,8 @@ p {
 
 .nav-links {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 40px;
+  margin-top: 0px; /* was 10px */
+  margin-bottom: 24px; /* was 40px */
 }
 
 .nav-links a {
@@ -38,12 +38,14 @@ p {
   padding: 6px 12px;
   font-family: monospace;
   font-size: 14px;
+  line-height: 1; /* ADDED */
   text-decoration: none;
   background-color: transparent;
-  border: 1px solid transparent; /* reserve space for hover bg */
+  border: 1px solid transparent;
   box-sizing: border-box;
   display: inline-block;
   transition: background-color 0.2s ease;
+  vertical-align: middle; /* ADDED */
 }
 
 .nav-links a:hover {
