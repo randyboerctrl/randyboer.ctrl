@@ -52,7 +52,7 @@ body {
   .block {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
-    max-width: 48%; /* Control block width */
+    width: 48%;  /* Make sure all blocks are the same width */
     box-sizing: border-box;
   }
   
