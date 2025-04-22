@@ -116,7 +116,13 @@ a:visited {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 4px 0; /* Tight vertical space */
+  padding: 4px 0;           /* Small vertical padding */
   font-size: 12px;
   font-family: monospace;
+  margin-top: 10px;         /* Small gap from content */
+}
+
+.footer p {
+  margin: 0;                /* Remove extra space around text */
+  line-height: 1.2;         /* Compact line height */
 }
