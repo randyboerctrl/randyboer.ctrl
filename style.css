@@ -19,7 +19,7 @@ body {
   }
   
   .links {
-    text-align: center;
+    text-align: justify;
     margin-bottom: 2rem;
   }
   
@@ -37,7 +37,7 @@ body {
 .links a:hover {
     background-color: rgba(0, 0, 0, 0.9);
     color: white; /* Ensures the link text stays white when hovered */
-    text-decoration: underline;
+    text-decoration: none;
 }
   
   .block {
@@ -58,3 +58,13 @@ body {
     margin: 0;
     line-height: 1.6;
   }
+  /* For links not inside .links */
+a {
+  color: white; /* Default color for other links */
+  text-decoration: none; /* Remove underline if needed */
+}
+
+a:hover, 
+a:focus {
+  text-decoration: underline; /* Add underline on hover for other links */
+}
