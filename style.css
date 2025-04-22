@@ -35,6 +35,12 @@ body {
     justify-content: center;
   }
   
+    .nav a.active {
+        background-color: #ffffff44; /* subtle highlight */
+        color: white;
+        font-weight: bold;
+    }
+  
   .nav a {
     background: rgba(0, 0, 0, 0.8);
     color: white;
