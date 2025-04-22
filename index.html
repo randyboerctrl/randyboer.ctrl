@@ -3,75 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Monospace&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
-  <style>
-    body {
-      font-family: 'Monospace', sans-serif;
-      background: url('your-wallpaper.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-  </style>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation links -->
-  <nav class="nav-links">
-    <a href="#bio">Bio</a>
-    <a href="#currently-learning">Currently Learning</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- Bio Block with translation toggle for English <-> Japanese -->
-  <div id="bio" class="block">
-    <h1>👨‍💻 Bio</h1>
-    <!-- Button to toggle between English and Japanese -->
-    <button onclick="toggleTranslation('bio')" class="translate-btn">EN / JP</button>
-    <div id="bio-text-container">
-      <p id="bio-text-english">Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.</p>
-      <p id="bio-text-japanese" class="translation-text">私の作品をここでぜひご覧ください。私は、使いやすく直感的なシステムを作ることに重点を置いているフロントエンド開発者です。フリーランスのプロジェクトも受けているので、もしコラボレーションに興味があれば、このウェブサイトを通じて気軽にお問い合わせください。</p>
+  <!-- Bio Block -->
+  <div class="block" id="bio">
+    <div class="language-switch-container">
+      <button id="toggleLanguage">EN | 日本語</button>
     </div>
+    <h1>Bio</h1>
+    <p id="bioText">Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.</p>
+    <p>Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. I also share some music on Bandcamp—feel free to check it out if you’re into that.</p>
   </div>
 
-  <!-- Currently Learning Block (No translation) -->
-  <div id="currently-learning" class="block">
-    <h1>📚 Currently Learning</h1>
-    <div id="currently-learning-text-container">
-      <p>🇯🇵 Japanese (N4 level, aiming for immersion)</p>
-      <p>💻 Front-end Development (HTML / CSS / JavaScript)</p>
-      <p>🛠️ DIY Projects (Camperbox Build, Kei Van Restoration)</p>
-    </div>
+  <!-- Other blocks (currently learning, projects, contact) -->
+  <div class="block">
+    <h1>Currently Learning</h1>
+    <p>🇯🇵 Japanese (N4 level, aiming for immersion)</p>
+    <p>💻 Front-end development (HTML / CSS / JavaScript)</p>
+    <p>🛠️ DIY projects (Camperbox build, Kei van restoration)</p>
   </div>
 
-  <!-- Projects Block (No translation) -->
-  <div id="projects" class="block">
-    <h1>🚀 Projects</h1>
-    <div id="projects-text-container">
-      <p>🚐 Kei Camperbox Plan</p>
-      <p>📊 Japan Budget Tracker</p>
-      <p>🌐 This Portfolio Site</p>
-    </div>
+  <div class="block">
+    <h1>Projects</h1>
+    <p>🚐 Kei Camperbox Plan</p>
+    <p>📊 Japan Budget Tracker</p>
+    <p>🌐 This Portfolio Site</p>
   </div>
 
-  <!-- Contact Block (No translation) -->
-  <div id="contact" class="block">
-    <h1>📧 Contact</h1>
-    <div id="contact-text-container">
-      <p>Feel free to reach out!</p>
-      <a href="mailto:someone@example.com">Email Me</a><br>
-      <a href="https://github.com">🐙 GitHub</a>
-    </div>
+  <div class="block">
+    <h1>Contact</h1>
+    <p>📧 <a href="mailto:your-email@example.com">Email me</a></p>
+    <p>🐙 <a href="https://github.com/your-username" target="_blank">GitHub</a></p>
   </div>
 
+  <!-- Footer Block -->
   <div class="footer-block">
-    <p>© 2025 Randy Boer, All rights reserved.</p>
+    <p>© 2025 Randy Boer, all rights reserved.</p>
   </div>
 
+  <!-- JavaScript -->
+  <script>
+    // Toggle language for Bio section
+    const toggleLanguageButton = document.getElementById('toggleLanguage');
+    const bioText = document.getElementById('bioText');
+
+    toggleLanguageButton.addEventListener('click', function() {
+      if (bioText.innerHTML === "Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.") {
+        bioText.innerHTML = "日本語のテキストに切り替えました";
+        // Add your Japanese text for Bio here
+      } else {
+        bioText.innerHTML = "Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.";
+      }
+    });
+  </script>
+  
 </body>
 </html>
