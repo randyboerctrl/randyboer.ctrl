@@ -1,83 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Randy Boer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <button id="toggleLanguage">Translate</button>
 
-  <div class="language-switch-container">
-    <button id="toggleLanguage">日本語</button>
-  </div>
+        <div class="block">
+            <h1>Bio</h1>
+            <p id="bio-text">Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.</p>
+        </div>
 
-  <nav class="nav-links">
-    <a href="#bio">bio</a>
-    <a href="#learning">currently learning</a>
-    <a href="#projects">projects</a>
-    <a href="#contact">contact</a>
-  </nav>
+        <div class="block">
+            <h2>Currently Learning</h2>
+            <p id="learning-text">🇯🇵 Japanese (N4 level, aiming for immersion)<br>💻 Front-end Development (HTML / CSS / JavaScript)<br>🛠️ DIY Projects (Camperbox Build, Kei Van Restoration)</p>
+        </div>
 
-  <section class="block" id="bio">
-    <div data-en>
-      <p>Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.</p>
-      <p>Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. I also share some music on Bandcamp—feel free to check it out if you’re into that.</p>
-    </div>
-    <div data-ja style="display: none;">
-      <p>ここでは私の仕事を自由にご覧ください。私は、使いやすく直感的なシステムを作ることに注力しているフロントエンド開発者です。フリーランスの仕事も受けているので、コラボに興味があれば、ぜひこのサイトからご連絡ください。</p>
-      <p>仕事以外では、日本語を学びながら（N4レベル）、日本で学ぶ計画を立てている37歳のオランダ人クリエイターです。空いた時間には軽バンを修復しながら、手作業と実用的なデザインへの情熱を大切にしています。Bandcampで音楽もシェアしているので、興味があればぜひ聴いてみてください。</p>
-    </div>
-  </section>
+        <div class="block">
+            <h2>Projects</h2>
+            <ul id="projects-text">
+                <li>🚐 Kei Camperbox Plan</li>
+                <li>📊 Japan Budget Tracker</li>
+                <li>🌐 This Portfolio Site</li>
+            </ul>
+        </div>
 
-  <section class="block" id="learning">
-    <div data-en>
-      <h1>currently learning</h1>
-      <p>🇯🇵 japanese (n4 level, aiming for immersion)<br>
-         💻 front-end development (html / css / javascript)<br>
-         🛠️ diy projects (camperbox build, kei van restoration)</p>
+        <div class="block footer-block">
+            <p id="contact-text">📧 Email me | 🐙 GitHub</p>
+        </div>
     </div>
-    <div data-ja style="display: none;">
-      <h1>現在の学習</h1>
-      <p>🇯🇵 日本語（N4レベル、没入を目指して）<br>
-         💻 フロントエンド開発（HTML / CSS / JavaScript）<br>
-         🛠️ DIYプロジェクト（キャンパーボックス製作、軽バンの修理）</p>
-    </div>
-  </section>
 
-  <section class="block" id="projects">
-    <div data-en>
-      <h1>projects</h1>
-      <p>🚐 Kei Camperbox Plan<br>
-         📊 Japan Budget Tracker<br>
-         🌐 This Portfolio Site</p>
-    </div>
-    <div data-ja style="display: none;">
-      <h1>プロジェクト</h1>
-      <p>🚐 軽キャンパーボックス計画<br>
-         📊 日本予算トラッカー<br>
-         🌐 このポートフォリオサイト</p>
-    </div>
-  </section>
-
-  <section class="block" id="contact">
-    <div data-en>
-      <h1>contact</h1>
-      <p>📧 <a href="mailto:your@email.com">Email me</a><br>
-         🐙 <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
-    </div>
-    <div data-ja style="display: none;">
-      <h1>連絡先</h1>
-      <p>📧 <a href="mailto:your@email.com">メール</a><br>
-         🐙 <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
-    </div>
-  </section>
-
-  <footer class="footer-block">
-    <p>© 2025 Randy Boer all rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
