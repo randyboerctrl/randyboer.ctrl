@@ -23,18 +23,9 @@ body {
     margin-bottom: 2rem;
   }
   
-  a {
-    color: white; /* Set the hyperlink text color to white */
-    text-decoration: none; /* Optional: Removes the underline, if you want */
-}
-
-a:hover {
-    color: lightgray; /* Optional: Change color when hovered */
-}
-
   .links a {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     padding: 8px 16px;
     margin: 0 8px;
@@ -45,7 +36,8 @@ a:hover {
   
   .links a:hover {
     background-color: rgba(0, 0, 0, 0.9);
-  }
+    color: white; /* Change text color to white on hover */
+}
   
   .block {
     background-color: rgba(0, 0, 0, 0.7);
