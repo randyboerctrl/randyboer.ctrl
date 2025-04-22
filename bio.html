@@ -21,14 +21,14 @@
 
     <section class="block">
       <h1>bio</h1>
-      
+
       <div id="bio-en" class="bio-content">
         <p>
-          Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. 
+          Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use.
           I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.
 
-          Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. 
-          In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. 
+          Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan.
+          In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design.
           I also share some music on Bandcamp—feel free to check it out if you’re into that.
         </p>
       </div>
@@ -45,16 +45,13 @@
   </div>
 
   <script>
-    document.getElementById('toggleLanguage').addEventListener('click', function() {
+    document.getElementById('toggleLanguage').addEventListener('click', function () {
       const bioEn = document.getElementById('bio-en');
       const bioJp = document.getElementById('bio-jp');
-      if (bioEn.style.display === "none") {
-        bioEn.style.display = "block";
-        bioJp.style.display = "none";
-      } else {
-        bioEn.style.display = "none";
-        bioJp.style.display = "block";
-      }
+      const isEnglishVisible = bioEn.style.display !== "none";
+
+      bioEn.style.display = isEnglishVisible ? "none" : "block";
+      bioJp.style.display = isEnglishVisible ? "block" : "none";
     });
   </script>
 </body>
