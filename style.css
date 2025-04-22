@@ -1,133 +1,28 @@
-body {
-  margin: 0;
-  font-family: monospace;
-  background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  font-size: 13px;
-}
+<div class="language-switch-container">
+  <button id="toggleLanguage">日本語</button>
+</div>
 
-html, body {
-  height: 100%;
-  overflow-x: hidden;
-  background-color: black; /* fallback for any uncovered areas */
-  scroll-behavior: smooth;
-}
+<div class="nav-links">
+  <a href="#bio">bio</a>
+  <a href="#projects">projects</a>
+  <a href="#contact">contact</a>
+</div>
 
-html {
-  scroll-behavior: smooth;
-}
+<div class="block" id="bio">
+  <h1>bio</h1>
+  <p>some text here...</p>
+</div>
 
-.block {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  margin: 20px auto;
-  width: 80%;
-  max-width: 800px;
-  border-radius: 8px;
-  text-align: left;
-  transform: translateX(-10%);
-}
+<div class="block" id="projects">
+  <h1>projects</h1>
+  <p>project content...</p>
+</div>
 
-h1 {
-  font-size: 16px;
-  margin-bottom: 12px;
-  text-transform: lowercase;
-}
+<div class="block" id="contact">
+  <h1>contact</h1>
+  <p>Email me at <a href="mailto:hello@example.com">hello@example.com</a></p>
+</div>
 
-p {
-  line-height: 1.5;
-  margin-bottom: 1em;
-}
-
-.nav-links {
-  text-align: center;
-  margin-top: 0;
-  padding-top: 8px;
-  margin-bottom: 24px;
-}
-
-.nav-links a {
-  color: white;
-  margin: 0 10px;
-  padding: 6px 12px;
-  font-family: monospace;
-  font-size: 13px;
-  text-decoration: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  box-sizing: border-box;
-  display: inline-block;
-  transition: background-color 0.2s ease;
-}
-
-.nav-links a:hover {
-  background-color: black;
-  color: white;
-  border: 1px solid transparent;
-  text-decoration: none;
-}
-
-.language-switch-container {
-  text-align: right;
-  padding: 4px 20px 0 0;
-}
-
-#toggleLanguage {
-  background: rgba(0, 0, 0, 0);
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  font-size: 12px;
-  font-family: monospace;
-  cursor: pointer;
-  text-transform: lowercase;
-}
-
-#toggleLanguage:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Fixes blue links in contact + applies to all block links */
-.block a {
-  color: white;
-  text-decoration: none;
-  transition: text-decoration 0.2s ease;
-}
-
-.block a:hover {
-  text-decoration: underline;
-}
-
-/* Make all links white and non-underlined */
-a {
-  color: white;
-  text-decoration: none;
-  transition: text-decoration 0.2s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Optional: override any specific a:visited colors */
-a:visited {
-  color: white;
-}
-
-.footer-block {
-  background-color: rgba(0, 0, 0, 0.8); /* Same as your other blocks */
-  color: white;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 12px;
-  font-family: monospace;
-  border-radius: 8px;
-  max-width: 800px;
-  margin: 20px auto 40px auto;
-}
-
-.footer p {
-  margin: 0;                /* Remove extra space around text */
-  line-height: 1.2;         /* Compact line height */
-}
+<div class="footer-block">
+  <p>© 2025 All rights reserved.</p>
+</div>
