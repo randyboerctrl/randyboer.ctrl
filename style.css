@@ -31,13 +31,13 @@
   /* NAVIGATION */
   .nav {
     display: flex;
-    justify-content: space-between; /* Align links in one line */
+    justify-content: flex-start; /* Align links on the left */
     gap: 1rem; /* Space between links */
   }
   
   .nav a {
     padding: 0.75rem 1rem;
-    background: rgba(0, 0, 0, 0.7);  /* Transparent background */
+    background: rgba(0, 0, 0, 0.7);  /* Transparent black background */
     color: white;
     text-decoration: none;
     text-align: center;
