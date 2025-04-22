@@ -23,6 +23,15 @@ body {
     margin-bottom: 2rem;
   }
   
+  a {
+    color: white; /* Set the hyperlink text color to white */
+    text-decoration: none; /* Optional: Removes the underline, if you want */
+}
+
+a:hover {
+    color: lightgray; /* Optional: Change color when hovered */
+}
+
   .links a {
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.7);
