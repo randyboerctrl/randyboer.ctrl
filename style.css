@@ -84,6 +84,11 @@ button {
   cursor: pointer;
 }
 
+.language-switch-container {
+  text-align: right;  /* Aligns the button to the right */
+  margin-bottom: 16px; /* Optional, just for spacing */
+}
+
 #toggleLanguage {
   display: inline-block;  /* Keeps the button to fit the text */
   background-color: rgba(0, 0, 0, 0);  /* Transparent background */
