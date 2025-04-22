@@ -61,6 +61,7 @@
     border-radius: 4px;
     width: 100%;  /* Make section take up full width inside wrapper */
     max-width: 800px;  /* Limit width to keep it clean */
+    margin-bottom: 1rem;
   }
   
   /* SECTION TITLES */
