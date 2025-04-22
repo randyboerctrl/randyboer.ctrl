@@ -8,96 +8,21 @@
 </head>
 <body>
   <div class="container">
-    <div class="container">
-      <div class="language-switch-container">
-        <button id="toggleLanguage">EN | 日本語</button>
-      </div>
-    
-      <div class="links">
-        <a href="bio.html">bio</a>
-        <a href="currently-learning.html">currently learning</a>
-        <a href="projects.html">projects</a>
-        <a href="contact.html">contact</a>
-      </div>
-    <div class="links">
-      <a href="#bio">bio</a>
-      <a href="#currently-learning">currently learning</a>
-      <a href="#projects">projects</a>
-      <a href="#contact">contact</a>
+    <div class="language-switch-container">
+      <button id="toggleLanguage" disabled>EN | 日本語</button>
     </div>
 
-    <section id="bio" class="block">
-      <h1>bio</h1>
-      
-      <!-- Language toggle button -->
-      <button id="toggleLanguage">English / 日本語</button>
-      
-      <!-- English Bio Content -->
-      <div id="bio-en" class="bio-content">
-        <p>
-          Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. 
-          I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.
+    <div class="links">
+      <a href="bio.html">bio</a>
+      <a href="currently-learning.html">currently learning</a>
+      <a href="projects.html">projects</a>
+      <a href="contact.html">contact</a>
+    </div>
 
-          Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. 
-          In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. 
-          I also share some music on Bandcamp—feel free to check it out if you’re into that.
-        </p>
-      </div>
-      <!-- Japanese Bio Content (Initially hidden) -->
-      <div id="bio-jp" class="bio-content" style="display:none;">
-        <p>
-          私の仕事についてはこちらからご覧ください。フロントエンド開発を専門にしており、使いやすく、シンプルで直感的なシステムを作ることに力を入れています。フリーランスのプロジェクトも受けているので、もしご興味があれば、ぜひこのウェブサイトからご連絡ください。
-        </p>
-        <p>
-          仕事以外では、37歳のオランダ人で、現在日本語を勉強中（N4レベル）で、日本での留学を計画しています。空いている時間には、軽バンの修復に取り組んでおり、実践的なデザインとゆっくりとした進行に魅力を感じています。また、Bandcampで音楽も公開しているので、興味があればぜひ聴いてみてください。
-        </p>
-      </div>
+    <section class="block">
+      <h1>Welcome</h1>
+      <p>This is the homepage of hiddenloops.</p>
     </section>
-    <section id="currently-learning" class="block">
-      <h1>currently learning</h1>
-      <p>
-        🇯🇵 japanese (n4 level, aiming for immersion)<br>
-        💻 front-end development (html / css / javascript)<br>
-        🛠️ diy projects (camperbox build, kei van restoration)
-      </p>
-    </section>
-
-    <section id="projects" class="block">
-      <h1>projects</h1>
-      <p>
-        🚐 Kei Camperbox Plan<br>
-        📊 Japan Budget Tracker<br>
-        🌐 This Portfolio Site
-      </p>
-    </section>
-    <section id="contact" class="block">
-      <h1>contact</h1>
-      <p>
-        📧 <a href="mailto:randyboer@outlook.com">Email me</a><br>
-        🐙 <a href="https://github.com/Hiddenloops">GitHub</a>
-      </p>
-    </section>
-
   </div>
-
-  <script src="script.js">
-
-document.getElementById('toggleLanguage').addEventListener('click', function() {
-  const bioEn = document.getElementById('bio-en');
-  const bioJp = document.getElementById('bio-jp');
-  
-  // Toggle the visibility of the two bio sections
-  if (bioEn.style.display === "none") {
-    bioEn.style.display = "block";
-    bioJp.style.display = "none";
-  } else {
-    bioEn.style.display = "none";
-    bioJp.style.display = "block";
-  }
-});
-  </script> <!-- Link to JavaScript file -->
 </body>
 </html>
-
-  <!-- Other sections go here... -->
-</div>
