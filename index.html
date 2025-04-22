@@ -1,28 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>hiddenloops</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <div class="language-switch-container">
-      <button id="toggleLanguage" disabled>EN | 日本語</button>
-    </div>
+/* General reset & layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <div class="links">
-      <a href="bio.html">bio</a>
-      <a href="currently-learning.html">currently learning</a>
-      <a href="projects.html">projects</a>
-      <a href="contact.html">contact</a>
-    </div>
+body {
+  background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
+  font-family: monospace;
+  color: white;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
 
-    <section class="block">
-      <h1>Welcome</h1>
-      <p>This is the homepage of hiddenloops.</p>
-    </section>
-  </div>
-</body>
-</html>
+/* Nav + language button */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 16px;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+#toggleLanguage {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: monospace;
+  text-transform: lowercase;
+  padding: 8px 16px;
+}
+
+#toggleLanguage:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Section blocks */
+.block {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 64px 32px;
+  margin: 48px auto;
+  max-width: 700px;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-transform: lowercase;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
