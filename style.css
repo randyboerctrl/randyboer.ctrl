@@ -1,80 +1,35 @@
-/* General Reset + Dark Background */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: monospace;
-    font-size: 13px;
-    color: white;
-    background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-  
-  /* Top Nav Bar */
-  .nav-bar {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem;
-  }
-  
-  .nav-bar a {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    font-size: 12px;
-    border-radius: 2px;
-    text-transform: lowercase;
-  }
-  
-  .nav-bar a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Main Container */
-  .main-container {
+/* Main layout */
+.main-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
-    max-width: 960px;
-    margin: 0 auto;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
   }
   
-  /* Left Column */
+  /* Columns */
   .left-column {
-    flex: 1;
-    max-width: 480px;
+    flex: 1 1 600px;
+    max-width: 600px;
   }
   
-  /* Right Column */
   .right-column {
-    flex: 0 0 320px;
-    max-width: 320px;
-    margin-top: 4.3rem; /* aligns with “currently learning” */
+    flex: 0 0 360px;
+    max-width: 360px;
+    margin-top: 4.5rem; /* aligns with 'currently learning' */
   }
   
-  /* Content Blocks */
-  .block {
+  /* Blocks */
+  .block,
+  .music-block {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: left;
-  }
-  
-  /* Section Headings */
-  h1 {
-    font-size: 14px;
-    margin-bottom: 0.5rem;
-    text-transform: lowercase;
-  }
-  
-  /* Paragraph */
-  p {
-    margin: 0;
+    overflow: visible;
+    width: 100%;
+    box-sizing: border-box;
   }
