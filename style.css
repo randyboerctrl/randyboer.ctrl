@@ -88,24 +88,25 @@ button {
   display: inline-block;
   background-color: rgba(0, 0, 0, 0);  /* Transparent background */
   color: white;
-  border: none; /* Ensure no border */
+  border: none;
   padding: 8px 16px;
   margin: 0 8px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 10px;
   font-family: monospace;
   text-transform: lowercase;
-  outline: none; /* Remove default outline */
-  box-shadow: none; /* Remove any box shadow that might look like a border */
+  outline: none;
+  box-shadow: none;
+  text-align: center;  /* Ensures the text inside the button is centered */
 }
 
 #toggleLanguage:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: rgb(0, 0, 0); /* Ensures the link text stays white when hovered */
-  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-decoration: none;
 }
 
 #toggleLanguage:focus {
-  outline: none; /* Remove the focus outline */
-  box-shadow: none; /* Remove any focus ring or box shadow */
+  outline: none;
+  box-shadow: none;
 }
