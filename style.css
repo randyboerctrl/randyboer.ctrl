@@ -84,6 +84,9 @@ button {
   cursor: pointer;
 }
 
+.container {
+  text-align: right;  /* Aligns the button to the right of the container */
+}
 #toggleLanguage {
   display: inline-flex;  /* Keeps the button to fit the text and align elements within it */
   align-items: center;   /* Vertically centers the text */
