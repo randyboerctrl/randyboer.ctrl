@@ -1,45 +1,46 @@
+/* General body and background */
 body {
   margin: 0;
-  font-family: monospace;
+  font-family: 'Monospace', monospace;
   background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
   background-size: cover;
   color: white;
   font-size: 13px;
 }
 
+/* Resetting all padding/margin to make the layout consistent */
 html, body {
   height: 100%;
   overflow-x: hidden;
-  background-color: black; /* fallback for any uncovered areas */
+  background-color: black; /* Fallback color */
   scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* Styling for the block elements */
 .block {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   margin: 20px auto;
-  width: 80%; /* Keeps blocks in the middle */
+  width: 80%; /* Block centered with 80% width */
   max-width: 800px;
   border-radius: 8px;
   text-align: left;
-  margin-left: 5%; /* This shifts the block to the left */
 }
 
+/* Style for all h1 headers */
 h1 {
   font-size: 16px;
   margin-bottom: 12px;
   text-transform: lowercase;
 }
 
+/* Styling the p tags for better readability */
 p {
   line-height: 1.5;
   margin-bottom: 1em;
 }
 
+/* Styling the nav links */
 .nav-links {
   text-align: center;
   margin-top: 0;
@@ -56,7 +57,6 @@ p {
   text-decoration: none;
   background-color: transparent;
   border: 1px solid transparent;
-  box-sizing: border-box;
   display: inline-block;
   transition: background-color 0.2s ease;
 }
@@ -65,30 +65,9 @@ p {
   background-color: black;
   color: white;
   border: 1px solid transparent;
-  text-decoration: none;
 }
 
-.language-switch-container {
-  text-align: right;
-  padding: 4px 20px 0 0;
-}
-
-#toggleLanguage {
-  background: rgba(0, 0, 0, 0);
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  font-size: 12px;
-  font-family: monospace;
-  cursor: pointer;
-  text-transform: lowercase;
-}
-
-#toggleLanguage:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Fixes blue links in contact + applies to all block links */
+/* Links in blocks */
 .block a {
   color: white;
   text-decoration: none;
@@ -99,24 +78,9 @@ p {
   text-decoration: underline;
 }
 
-/* Make all links white and non-underlined */
-a {
-  color: white;
-  text-decoration: none;
-  transition: text-decoration 0.2s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Optional: override any specific a:visited colors */
-a:visited {
-  color: white;
-}
-
+/* Styling the footer block */
 .footer-block {
-  background-color: rgba(0, 0, 0, 0.8); /* Same as your other blocks */
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   text-align: center;
   padding: 10px 20px;
@@ -124,10 +88,11 @@ a:visited {
   font-family: monospace;
   border-radius: 8px;
   max-width: 800px;
-  margin: 20px auto 40px auto;
+  margin: 20px auto;
 }
 
 .footer p {
-  margin: 0;                /* Remove extra space around text */
-  line-height: 1.2;         /* Compact line height */
+  margin: 0;
+  line-height: 1.2;
+  font-size: 12px;
 }
