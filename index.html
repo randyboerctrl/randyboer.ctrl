@@ -3,101 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hiddenloops</title>
+  <title>Hidden Loops</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Scroll Progress Bar -->
-  <div id="progress-bar"></div>
-
-  <!-- Top Navigation -->
-  <div class="nav-wrapper">
-    <div class="nav-link site-title">Hiddenloops</div>
-    <a href="#bio" class="nav-link">bio</a>
-    <a href="#learning" class="nav-link">learning</a>
-    <a href="#projects" class="nav-link">projects</a>
-    <a href="#contact" class="nav-link">contact</a>
+  <div class="nav">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <!-- Add more links as needed -->
   </div>
 
-  <!-- Main Layout -->
-  <div class="main-container">
+  <div class="container">
+    <section id="about" class="block">
+      <h1>About</h1>
+      <p>Your about section content goes here.</p>
+    </section>
 
-    <!-- Left Column -->
-    <div class="left-column">
+    <section id="projects" class="block">
+      <h1>Projects</h1>
+      <p>Your projects section content goes here.</p>
+    </section>
 
-      <section id="bio" class="block fade-in">
-        <h1>bio</h1>
-        <p>
-          i'm a 37-year-old dutch guy currently learning japanese (around N4 level).<br>
-          working towards studying in japan, and into hands-on projects like restoring a kei van.<br>
-          right now i'm focused on front-end development and building slower, intentional systems.
-        </p>
-      </section>
+    <section id="contact" class="block">
+      <h1>Contact</h1>
+      <p>Your contact section content goes here.</p>
+    </section>
 
-      <section id="learning" class="block fade-in">
-        <h1>currently learning</h1>
-        <p>
-          🇯🇵 japanese (n4 level, aiming for immersion)<br>
-          💻 front-end development (html / css / javascript)<br>
-          🛠️ diy projects (camperbox build, kei van restoration)
-        </p>
-      </section>
-
-      <section id="projects" class="block fade-in">
-        <h1>projects</h1>
-        <p>
-          🚐 Kei Camperbox Plan<br>
-          📊 Japan Budget Tracker<br>
-          🌐 This Portfolio Site
-        </p>
-      </section>
-
-      <section id="contact" class="block fade-in">
-        <h1>contact</h1>
-        <p>
-          📧 Email me<br>
-          🐙 GitHub
-        </p>
-      </section>
-
-    </div>
-
-    <!-- Right Column -->
-    <div class="right-column fade-in">
-      <div class="music-block">
-        <h1>now playing</h1>
-        <iframe style="border: 0; width: 100%; height: 120px;" 
-          src="https://bandcamp.com/EmbeddedPlayer/album=1822601485/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" 
-          seamless>
-          <a href="https://solitudesystem.bandcamp.com/album/you-said-it-once">You Said It Once by Solitude System</a>
-        </iframe>
-      </div>
-    </div>
-
+    <!-- Add more sections as needed -->
   </div>
-
-  <!-- Scripts -->
-  <script>
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / scrollHeight) * 100;
-      document.getElementById('progress-bar').style.width = scrollPercent + '%';
-    });
-
-    const faders = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    faders.forEach(fader => observer.observe(fader));
-  </script>
-
 </body>
 </html>

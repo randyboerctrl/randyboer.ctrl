@@ -1,35 +1,79 @@
-/* Main layout */
-.main-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1200px;
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-size: 13px;
+    color: white;
+    background-image: url('./images/wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 800px;
     margin: 0 auto;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Navigation Links */
+  .nav {
+    display: flex;
     flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 1rem 0;
+    justify-content: center;
   }
   
-  /* Columns */
-  .left-column {
-    flex: 1 1 600px;
-    max-width: 600px;
+  .nav a {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 12px;
+    text-transform: lowercase;
+    border-radius: 3px;
+    transition: background 0.3s ease;
   }
   
-  .right-column {
-    flex: 0 0 360px;
-    max-width: 360px;
-    margin-top: 4.5rem; /* aligns with 'currently learning' */
+  .nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
   }
   
-  /* Blocks */
-  .block,
-  .music-block {
+  /* Content Blocks */
+  .block {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem;
-    margin-bottom: 1.5rem;
+    max-width: 600px;
     text-align: left;
-    overflow: visible;
-    width: 100%;
     box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    text-transform: lowercase;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 2rem 1rem;
+      align-items: center;
+    }
+  
+    .block {
+      max-width: 100%;
+      width: 100%;
+    }
+  
+    .nav {
+      justify-content: center;
+    }
   }
