@@ -14,3 +14,10 @@ toggleBtn.addEventListener('click', () => {
 
   toggleBtn.textContent = toggleBtn.textContent === '日本語' ? 'English' : '日本語';
 });
+
+const navToggle = document.getElementById('navToggle');
+const navbar = document.getElementById('navbar');
+
+navToggle.addEventListener('click', () => {
+  navbar.classList.toggle('show');
+});
