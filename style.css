@@ -1,4 +1,4 @@
-/* Background wallpaper + base styles */
+/* Base styles */
 body {
     margin: 0;
     padding: 0;
@@ -10,6 +10,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     line-height: 1.6;
+    overflow-x: hidden;
   }
   
   /* Scroll progress bar */
@@ -23,50 +24,38 @@ body {
     z-index: 1000;
   }
   
-  /* Top navigation links */
+  /* Top navigation */
   .top-links {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 0.5rem;
     padding: 1rem;
     flex-wrap: wrap;
-    background: rgba(0, 0, 0, 0.6);
     position: sticky;
     top: 0;
     z-index: 10;
+    background: none;
   }
   
-  .site-title {
-    font-weight: bold;
-    font-size: 13px;
-    padding: 4px 8px;
-    background: black;
-    color: white;
-    display: inline-block;
-  }
-  
-  .top-links nav {
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  .top-links nav a {
+  .top-links .site-title,
+  .top-links a {
     text-decoration: none;
     color: white;
     background: black;
     padding: 4px 8px;
     font-size: 13px;
+    display: inline-block;
   }
   
-  /* Layout wrapper */
+  /* Layout */
   .main-layout {
     display: flex;
     flex-wrap: wrap;
     padding: 2rem;
     gap: 2rem;
+    align-items: flex-start;
   }
   
-  /* Left & Right columns */
+  /* Columns */
   .left-column {
     flex: 1 1 600px;
     min-width: 300px;
@@ -75,23 +64,20 @@ body {
   .right-column {
     flex: 0 0 360px;
     min-width: 300px;
+    margin-top: 88px; /* Aligns with second block's top */
   }
   
   /* Content blocks */
-  .block {
+  .block, .music-block {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem;
     margin-bottom: 1rem;
     text-align: left;
+    overflow: hidden;
   }
   
   .block.wide {
     max-width: 100%;
-  }
-  
-  .music-block {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
   }
   
   /* Headings */
@@ -106,7 +92,7 @@ body {
     margin: 0;
   }
   
-  /* Fade-in animations */
+  /* Fade-in animation */
   .fade-in {
     opacity: 0;
     transform: translateY(20px);
