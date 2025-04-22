@@ -11,20 +11,20 @@ body {
     background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
     background-size: cover;
     color: white;
-    padding: 0;
-    margin: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
 }
 
-/* Links */
+/* Links at the top, centered */
 .links {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    padding: 10px;
+    gap: 20px;
+    padding: 20px 0;
     position: absolute;
     top: 10px;
     width: 100%;
@@ -54,8 +54,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-size: 14px;
-    transition: padding 0.3s ease;
-    margin-bottom: 10px;
 }
 
 /* Section headers */
