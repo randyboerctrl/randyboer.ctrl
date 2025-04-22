@@ -34,9 +34,10 @@ body {
     text-transform: lowercase;
   }
   
-  .links a:hover {
+.links a:hover {
     background-color: rgba(0, 0, 0, 0.9);
-    color: white; /* Change text color to white on hover */
+    color: white; /* Ensures the link text stays white when hovered */
+    text-decoration: underline;
 }
   
   .block {
