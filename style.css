@@ -88,6 +88,7 @@ button {
   text-align: center; /* Center the text */
   text-decoration: none; /* Remove underline */
   display: inline-block; /* Make it inline block */
+  font-family: 'Courier New', Courier, monospace
   font-size: 10px; /* Text size */
   cursor: pointer; /* Pointer cursor on hover */
   border-radius: 5px; /* Rounded corners */
@@ -95,8 +96,9 @@ button {
 }
 
 #toggleLanguage:hover {
-  background-color: #45a049; /* Darker green on hover */
-  transform: scale(1.05); /* Slightly enlarge button on hover */
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white; /* Ensures the link text stays white when hovered */
+    text-decoration: none;
 }
 
 #toggleLanguage:focus {
