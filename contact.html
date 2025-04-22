@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bio | hiddenloops</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="language-switch-container">
+      <button id="toggleLanguage">EN | 日本語</button>
+    </div>
+
+    <div class="links">
+      <a href="index.html">home</a>
+      <a href="currently-learning.html">currently learning</a>
+      <a href="projects.html">projects</a>
+      <a href="contact.html">contact</a>
+    </div>
+
+    <section class="block">
+      <h1>bio</h1>
+      
+      <div id="bio-en" class="bio-content">
+        <p>
+          Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. 
+          I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.
+
+          Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. 
+          In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. 
+          I also share some music on Bandcamp—feel free to check it out if you’re into that.
+        </p>
+      </div>
+
+      <div id="bio-jp" class="bio-content" style="display:none;">
+        <p>
+          私の仕事についてはこちらからご覧ください。フロントエンド開発を専門にしており、使いやすく、シンプルで直感的なシステムを作ることに力を入れています。フリーランスのプロジェクトも受けているので、もしご興味があれば、ぜひこのウェブサイトからご連絡ください。
+        </p>
+        <p>
+          仕事以外では、37歳のオランダ人で、現在日本語を勉強中（N4レベル）で、日本での留学を計画しています。空いている時間には、軽バンの修復に取り組んでおり、実践的なデザインとゆっくりとした進行に魅力を感じています。また、Bandcampで音楽も公開しているので、興味があればぜひ聴いてみてください。
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('toggleLanguage').addEventListener('click', function() {
+      const bioEn = document.getElementById('bio-en');
+      const bioJp = document.getElementById('bio-jp');
+      if (bioEn.style.display === "none") {
+        bioEn.style.display = "block";
+        bioJp.style.display = "none";
+      } else {
+        bioEn.style.display = "none";
+        bioJp.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
