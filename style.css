@@ -1,98 +1,34 @@
-/* General body and background */
-body {
-  margin: 0;
-  font-family: 'Monospace', monospace;
-  background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
-  background-size: cover;
+/* Remove rounded corners from the blocks */
+.block, .footer-block {
+  border-radius: 0px;
+}
+
+/* Hide the translated text initially */
+.translation-text {
+  display: none;
+}
+
+/* Basic styling for translate button */
+.translate-btn {
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #4CAF50;
   color: white;
-  font-size: 13px;
+  border: none;
+  cursor: pointer;
 }
 
-/* Resetting all padding/margin to make the layout consistent */
-html, body {
-  height: 100%;
-  overflow-x: hidden;
-  background-color: black; /* Fallback color */
-  scroll-behavior: smooth;
+.translate-btn:hover {
+  background-color: #45a049;
 }
 
-/* Styling for the block elements */
-.block {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  margin: 20px auto;
-  width: 80%; /* Block centered with 80% width */
-  max-width: 800px;
-  border-radius: 8px;
-  text-align: left;
-}
-
-/* Style for all h1 headers */
-h1 {
-  font-size: 16px;
-  margin-bottom: 12px;
-  text-transform: lowercase;
-}
-
-/* Styling the p tags for better readability */
-p {
-  line-height: 1.5;
-  margin-bottom: 1em;
-}
-
-/* Styling the nav links */
-.nav-links {
-  text-align: center;
-  margin-top: 0;
-  padding-top: 8px;
-  margin-bottom: 24px;
+/* Ensure everything else stays as you need */
+body {
+  font-family: 'Monospace', sans-serif;
 }
 
 .nav-links a {
-  color: white;
-  margin: 0 10px;
-  padding: 6px 12px;
-  font-family: monospace;
-  font-size: 13px;
   text-decoration: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  display: inline-block;
-  transition: background-color 0.2s ease;
-}
-
-.nav-links a:hover {
-  background-color: black;
-  color: white;
-  border: 1px solid transparent;
-}
-
-/* Links in blocks */
-.block a {
-  color: white;
-  text-decoration: none;
-  transition: text-decoration 0.2s ease;
-}
-
-.block a:hover {
-  text-decoration: underline;
-}
-
-/* Styling the footer block */
-.footer-block {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 12px;
-  font-family: monospace;
-  border-radius: 8px;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-.footer p {
-  margin: 0;
-  line-height: 1.2;
-  font-size: 12px;
+  color: #333;
+  margin-right: 20px;
 }
