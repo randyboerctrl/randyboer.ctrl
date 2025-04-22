@@ -90,9 +90,9 @@ button {
   color: white;
   border: none; /* Ensure no border */
   padding: 8px 16px;
-  margin: 0 8px;
+  margin: 0px;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 12px;
   font-family: monospace;
   text-transform: lowercase;
   outline: none; /* Remove default outline */
@@ -100,9 +100,9 @@ button {
 }
 
 #toggleLanguage:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: white; /* Ensures the link text stays white when hovered */
-  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(0, 0, 0); /* Ensures the link text stays white when hovered */
+  text-decoration: underline;
 }
 
 #toggleLanguage:focus {
