@@ -87,31 +87,26 @@ button {
 .container {
   text-align: right;  /* Aligns the button to the right of the container */
 }
+
 #toggleLanguage {
-  display: inline-flex;  /* Keeps the button to fit the text and align elements within it */
-  align-items: center;   /* Vertically centers the text */
-  background-color: rgba(0, 0, 0, 0);
+  display: inline-block;  /* Keeps the button to fit the text */
+  background-color: rgba(0, 0, 0, 0);  /* Transparent background */
   color: white;
   border: none;
-  padding: 8px 16px;     /* Adjust the padding to fit content */
-  margin: 0;             /* Remove any margin around the button */
+  padding: 8px 16px;  /* Adjust the padding to fit content */
+  margin: 0;  /* Remove any margin around the button */
   font-size: 14px;
   font-family: monospace;
   text-transform: lowercase;
   outline: none;
   box-shadow: none;
-  white-space: nowrap;   /* Prevents wrapping the text inside the button */
+  white-space: nowrap;  /* Prevents wrapping the text inside the button */
 }
 
 #toggleLanguage:hover {
   background-color: rgba(0, 0, 0, 0.9);  /* Darken the background on hover */
   color: white;
-}
-
-#toggleLanguage:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: white;
-  text-decoration: none;
+  text-decoration: none;  /* Ensure no underline on hover */
 }
 
 #toggleLanguage:focus {
