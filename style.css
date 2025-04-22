@@ -112,16 +112,16 @@ a:visited {
   color: white;
 }
 
-.footer {
-  background-color: black;
+.footer-block {
+  background-color: rgba(0, 0, 0, 0.8); /* Same as your other blocks */
   color: white;
   text-align: center;
-  padding: 8px 16px;
+  padding: 10px 20px;
   font-size: 12px;
   font-family: monospace;
-  border-radius: 6px;
-  max-width: fit-content;
-  margin: 20px auto 40px auto; /* top auto bottom auto = centered */
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto 40px auto;
 }
 
 .footer p {
