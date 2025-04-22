@@ -41,11 +41,11 @@
   .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 3rem; /* Slight indent from the left */
-    gap: 1.5rem; /* Space between blocks */
-    max-width: 960px; /* Restrict max width */
+    gap: 1rem; /* Space between blocks */
+    max-width: 800px; /* Restrict max width */
     margin: 0 auto; /* Center the container horizontally */
+    padding-left: 1rem; /* Slight indent from the left */
+    padding-right: 1rem; /* Slight indent from the right */
   }
   
   /* Section blocks */
@@ -56,6 +56,7 @@
     width: 100%; /* Blocks will take up 100% of the container width */
     max-width: 600px; /* Restrict max width for readability */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 1rem 0; /* Space between blocks */
   }
   
   /* Section titles */
@@ -64,18 +65,21 @@
     margin-bottom: 1rem;
     text-transform: lowercase;
     font-weight: bold;
+    text-align: left;
   }
   
   /* Bio section */
   .bio {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+    text-align: left;
   }
   
   /* Goals section */
   .goals {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+    text-align: left;
   }
   
   .goals p {
@@ -86,6 +90,7 @@
   .projects {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+    text-align: left;
   }
   
   .projects p {
@@ -96,4 +101,5 @@
   .contact {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
+    text-align: left;
   }
