@@ -1,105 +1,70 @@
-/* Base styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: monospace;
-  font-size: 13px;
-  color: white;
-  background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hiddenloops</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="main-container">
+    <!-- Left Column: Bio, Currently Learning, Projects, and Contact Sections -->
+    <div class="left-column">
+      <section class="block">
+        <h1>bio</h1>
+        <p>
+          i'm a 37-year-old dutch guy currently learning japanese (around N4 level).<br>
+          working towards studying in japan, and into hands-on projects like restoring a kei van.<br>
+          right now i'm focused on front-end development and building slower, intentional systems.
+        </p>
+      </section>
 
-/* Scroll progress bar */
-#progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 4px;
-  background: #e99708;
-  width: 0%;
-  z-index: 1000;
-}
+      <section class="block">
+        <h1>currently learning</h1>
+        <p>
+          🇯🇵 japanese (n4 level, aiming for immersion)<br>
+          💻 front-end development (html / css / javascript)<br>
+          🛠️ diy projects (camperbox build, kei van restoration)
+        </p>
+      </section>
 
-/* Top navigation */
-.top-links {
-  display: flex;
-  gap: 0.5rem;
-  padding: 1rem;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: none;
-}
+      <section class="block">
+        <h1>projects</h1>
+        <p>
+          🚐 Kei Camperbox Plan<br>
+          📊 Japan Budget Tracker<br>
+          🌐 This Portfolio Site
+        </p>
+      </section>
 
-.top-links .site-title,
-.top-links a {
-  text-decoration: none;
-  color: white;
-  background: black;
-  padding: 4px 8px;
-  font-size: 13px;
-  display: inline-block;
-}
+      <section class="block">
+        <h1>contact</h1>
+        <p>
+          📧 Email me<br>
+          🐙 GitHub
+        </p>
+      </section>
+    </div>
 
-/* Layout */
-.main-layout {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2rem;
-  gap: 2rem;
-  align-items: flex-start;
-}
+    <!-- Right Column: Music Block -->
+    <div class="right-column">
+      <section class="music-block">
+        <h1>now playing</h1>
+        <iframe style="border: 0; width: 100%; height: 120px;" 
+                src="https://bandcamp.com/EmbeddedPlayer/album=1822601485/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/" 
+                seamless>
+          <a href="https://solitudesystem.bandcamp.com/album/you-said-it-once">You Said It Once by Solitude System</a>
+        </iframe>
+      </section>
+    </div>
+  </div>
 
-/* Columns */
-.left-column {
-  flex: 1 1 600px;
-  min-width: 300px;
-}
-
-.right-column {
-  flex: 0 0 360px;
-  min-width: 300px;
-  margin-top: 88px; /* Aligns with second block's top */
-}
-
-/* Content blocks */
-.block, .music-block {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  text-align: left;
-  overflow: hidden;
-}
-
-.block.wide {
-  max-width: 100%;
-}
-
-/* Headings */
-h1 {
-  font-size: 14px;
-  margin-bottom: 0.5rem;
-  text-transform: lowercase;
-}
-
-/* Paragraphs */
-p {
-  margin: 0;
-}
-
-/* Fade-in animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+  <!-- Navigation Links -->
+  <div class="top-links">
+    <a href="#bio">Bio</a>
+    <a href="#currently-learning">Currently Learning</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</body>
+</html>
