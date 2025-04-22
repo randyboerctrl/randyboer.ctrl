@@ -1,63 +1,29 @@
-/* ==== RESET ==== */
+/* General reset & layout */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ==== BODY & BACKGROUND ==== */
 body {
-  background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image path */
+  background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
   font-family: monospace;
-  text-transform: lowercase;
   color: white;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* ==== CONTAINER ==== */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* ==== LANGUAGE SWITCH BUTTON ==== */
-.language-switch-container {
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-#toggleLanguage {
-  display: inline-flex;
+/* Nav + language button */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-family: monospace;
-  text-transform: lowercase;
-  cursor: pointer;
-  white-space: nowrap;
-  outline: none;
-}
-
-#toggleLanguage:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-#toggleLanguage:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* ==== NAVIGATION LINKS ==== */
-.links {
-  margin-bottom: 30px;
+  padding: 16px 32px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .links a {
@@ -65,38 +31,48 @@ body {
   text-decoration: none;
   margin-right: 16px;
   font-size: 14px;
+  text-transform: lowercase;
 }
 
 .links a:hover {
   text-decoration: underline;
 }
 
-/* ==== BLOCKS FOR SECTIONS ==== */
-.block {
-  background-color: rgba(0, 0, 0, 0.5); /* Slightly dark background for readability */
-  padding: 20px;
-  margin-bottom: 40px;
-  border-radius: 6px;
-}
-
-.block h1 {
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-
-/* ==== BIO CONTENT ==== */
-.bio-content {
+#toggleLanguage {
+  background-color: transparent;
+  color: white;
+  border: none;
   font-size: 14px;
+  cursor: pointer;
+  font-family: monospace;
+  text-transform: lowercase;
+  padding: 8px 16px;
 }
 
-/* ==== RESPONSIVE ==== */
-@media screen and (max-width: 600px) {
-  .links a {
-    display: block;
-    margin-bottom: 10px;
-  }
+#toggleLanguage:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
-  .language-switch-container {
-    text-align: center;
-  }
+/* Section blocks */
+.block {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 64px 32px;
+  margin: 48px auto;
+  max-width: 700px;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-transform: lowercase;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
 }
