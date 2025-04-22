@@ -1,86 +1,44 @@
-/* Global styles */
 body {
     margin: 0;
     padding: 0;
     font-family: monospace;
-    font-size: 13px;
-    color: white;
     background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    line-height: 1.6;
+    color: white;
   }
   
-  /* Container for sections */
   .container {
-    padding: 4rem 2rem;
-    max-width: 1200px;  /* Limiting container width */
-    margin: 0 auto; /* Center container horizontally */
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
   }
   
-  /* Link blocks at the top */
   .links {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
   
   .links a {
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 20px;
     margin: 0 10px;
+    padding: 6px 12px;
+    color: white;
     text-decoration: none;
-    text-transform: lowercase;
-    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
   }
   
   .links a:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.2);
   }
   
-  /* Row containing two blocks next to each other */
-  .row {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* Reusable section blocks */
   .block {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1rem;
-    width: 48%;  /* Make sure all blocks are the same width */
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    font-size: 14px;
-    margin-bottom: 0.5rem;
-    text-transform: lowercase;
-  }
-  
-  /* Paragraph text */
-  p {
-    margin: 0;
-    line-height: 1.5;
-  }
-  
-  /* Media Query for small screens */
-  @media (max-width: 768px) {
-    .links a {
-      margin: 5px;
-      padding: 8px 15px;
-      font-size: 12px;
-    }
-  
-    .row {
-      flex-direction: column; /* Stack sections vertically on small screens */
-    }
-  
-    .block {
-      max-width: 100%; /* Full width on smaller screens */
-    }
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    text-align: left;
   }
