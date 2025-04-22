@@ -10,35 +10,35 @@ body {
 .block {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  margin: 20px auto;
+  margin: 16px auto;
   max-width: 800px;
   border-radius: 8px;
 }
 
 h1 {
   font-size: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   text-transform: lowercase;
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 1em;
 }
 
 .nav-links {
   text-align: center;
-  margin-top: 0; /* Remove space at the top */
-  padding-top: 10px; /* Fine-tune spacing */
-  margin-bottom: 30px; /* Slightly less space below */
+  margin-top: 0;
+  padding-top: 8px;
+  margin-bottom: 24px;
 }
 
 .nav-links a {
   color: white;
-  margin: 0 12px;
+  margin: 0 10px;
   padding: 6px 12px;
   font-family: monospace;
-  font-size: 14px;
+  font-size: 13px;
   text-decoration: none;
   background-color: transparent;
   border: 1px solid transparent;
@@ -56,7 +56,7 @@ p {
 
 .language-switch-container {
   text-align: right;
-  padding: 8px 20px 0 0;
+  padding: 4px 20px 0 0;
 }
 
 #toggleLanguage {
@@ -74,11 +74,11 @@ p {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* ALL links inside blocks: white, no underline, underlined on hover */
+/* Fixes blue links in contact + applies to all block links */
 .block a {
   color: white;
   text-decoration: none;
-  transition: text-decoration 0.3s ease;
+  transition: text-decoration 0.2s ease;
 }
 
 .block a:hover {
