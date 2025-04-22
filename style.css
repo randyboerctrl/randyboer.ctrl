@@ -1,50 +1,87 @@
-body {
+/* General reset for the page */
+* {
     margin: 0;
-    font-family: monospace;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background */
+body {
+    font-family: 'Courier New', monospace;
     background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
     background-size: cover;
     color: white;
-  }
-  
-  .top-links {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+
+/* Links */
+.links {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    padding: 40px 20px 20px;
-  }
-  
-  .top-links a {
-    text-decoration: none;
-    color: white;
-    padding: 8px 16px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 4px;
-    transition: background 0.3s ease;
-  }
-  
-  .top-links a:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 5vw;
-    max-width: 700px;
-  }
-  
-  .block {
-    background: rgba(0, 0, 0, 0.65);
-    padding: 20px;
-    margin: 12px 0;
+    gap: 15px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
     width: 100%;
-    box-sizing: border-box;
-    border-radius: 6px;
-  }
-  
-  h2 {
-    margin-top: 0;
-    font-weight: normal;
-    font-size: 20px;
-  }
+}
+
+.link {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.link:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Section styling */
+.section {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    transition: padding 0.3s ease;
+}
+
+/* Section headers */
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Links for smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .links {
+        flex-direction: column;
+    }
+
+    .link {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .section {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .section h2 {
+        font-size: 16px;
+    }
+}
