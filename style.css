@@ -116,12 +116,12 @@ a:visited {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 6px 12px;
+  padding: 8px 16px;
   font-size: 12px;
   font-family: monospace;
-  margin: 20px auto;           /* Centers it horizontally */
   border-radius: 6px;
-  display: inline-block;       /* Makes it shrink to fit text */
+  max-width: fit-content;
+  margin: 20px auto 40px auto; /* top auto bottom auto = centered */
 }
 
 .footer p {
