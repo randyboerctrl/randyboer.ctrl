@@ -85,18 +85,24 @@ button {
 }
 
 #toggleLanguage {
-  display: inline-block;  /* Keeps the button size to fit the text */
+  display: inline-flex;  /* Keeps the button to fit the text and align elements within it */
+  align-items: center;   /* Vertically centers the text */
   background-color: rgba(0, 0, 0, 0);
   color: white;
   border: none;
-  padding: 8px 16px;  /* Adjust padding to fit content */
-  margin-left: 10px;  /* Adds space between the button and the text */
+  padding: 8px 16px;     /* Adjust the padding to fit content */
+  margin: 0;             /* Remove any margin around the button */
   font-size: 14px;
   font-family: monospace;
   text-transform: lowercase;
   outline: none;
   box-shadow: none;
-  white-space: nowrap;  /* Prevents text from wrapping inside the button */
+  white-space: nowrap;   /* Prevents wrapping the text inside the button */
+}
+
+#toggleLanguage:hover {
+  background-color: rgba(0, 0, 0, 0.9);  /* Darken the background on hover */
+  color: white;
 }
 
 #toggleLanguage:hover {
