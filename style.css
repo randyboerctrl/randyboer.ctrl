@@ -21,7 +21,7 @@ html {
 .block {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  margin: 16px auto;
+  margin: 20px auto 10px auto; /* less space below */
   max-width: 800px;
   border-radius: 8px;
 }
