@@ -35,28 +35,27 @@
     background: rgba(255, 255, 255, 0.2);
   }
   
-  /* Main container for all blocks */
+  /* Main container */
   .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    max-width: 800px;
-    margin: 0 auto;
+    align-items: flex-start; /* push blocks to the left */
     padding: 1rem 2rem;
-    gap: 2rem;
+    gap: 1.2rem; /* tighter spacing between blocks */
   }
   
-  /* Each content block */
+  /* Content blocks */
   .block {
     background: rgba(0, 0, 0, 0.6);
-    padding: 1.5rem;
+    padding: 1rem 1.2rem;
     border-radius: 5px;
-    width: 100%;
+    width: 600px; /* less wide */
+    max-width: 90vw;
   }
   
   /* Titles */
   h1 {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     text-transform: lowercase;
   }
