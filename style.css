@@ -21,12 +21,12 @@ html {
 .block {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  margin: 20px 0; /* No margin left and right, auto centered */
-  width: 80%;
+  margin: 20px auto;
+  width: 80%; /* Keeps blocks in the middle */
   max-width: 800px;
   border-radius: 8px;
   text-align: left;
-  margin-left: 5%; /* Shift blocks to the left by 5% */
+  margin-left: 5%; /* This shifts the block to the left */
 }
 
 h1 {
