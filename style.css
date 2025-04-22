@@ -1,20 +1,50 @@
-/* Remove rounded corners from the blocks */
-.block, .footer-block {
-  border-radius: 0px;
+/* Basic reset and styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Hide the translated text initially */
-.translation-text {
-  display: none;
+body {
+  font-family: 'Monospace', sans-serif;
+  background: #f4f4f4;
+  color: #333;
 }
 
-/* Ensuring container layout doesn’t break */
-#bio-text-container, #currently-learning-text-container, #projects-text-container, #contact-text-container {
-  position: relative;
+.nav-links {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
   padding: 10px;
 }
 
-/* Basic styling for translate button */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+}
+
+.nav-links a:hover {
+  color: #4CAF50;
+}
+
+/* Block layout */
+.block {
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-block {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Styling for translation button */
 .translate-btn {
   padding: 5px 10px;
   margin-top: 10px;
@@ -28,28 +58,24 @@
   background-color: #45a049;
 }
 
-/* Body and other styles for general layout */
-body {
-  font-family: 'Monospace', sans-serif;
-  margin: 0;
-  padding: 0;
+/* Hide translated text initially */
+.translation-text {
+  display: none;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  margin-right: 20px;
+/* General Block Content Styling */
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
 }
 
-.block {
-  margin: 20px;
-  padding: 20px;
-  background-color: #f4f4f4;
+p {
+  font-size: 1.2em;
+  line-height: 1.6em;
 }
 
-.footer-block {
-  background-color: #333;
-  color: white;
+/* Ensuring container layout doesn’t break */
+#bio-text-container, #currently-learning-text-container, #projects-text-container, #contact-text-container {
+  position: relative;
   padding: 10px;
-  text-align: center;
 }
