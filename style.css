@@ -1,4 +1,4 @@
-/* Base styles */
+/* General styling for the body */
 body {
     margin: 0;
     padding: 0;
@@ -10,77 +10,68 @@ body {
     background-position: center;
     background-attachment: fixed;
     line-height: 1.6;
-    overflow-x: hidden;
   }
   
-  /* Scroll progress bar */
-  #progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: #e99708;
-    width: 0%;
-    z-index: 1000;
-  }
-  
-  /* Top navigation */
+  /* Top Links */
   .top-links {
     display: flex;
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 1rem;
     padding: 1rem;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: none;
+    background-color: rgba(0, 0, 0, 0.6);
   }
   
-  .top-links .site-title,
   .top-links a {
-    text-decoration: none;
     color: white;
-    background: black;
-    padding: 4px 8px;
-    font-size: 13px;
-    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem;
+    border-radius: 4px;
   }
   
-  /* Layout */
-  .main-layout {
+  .top-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Main Layout */
+  .main-container {
     display: flex;
-    flex-wrap: wrap;
-    padding: 2rem;
-    gap: 2rem;
+    justify-content: center;
     align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
   }
   
-  /* Columns */
+  /* Left Column: Contains Bio, Learning, Projects, and Contact */
   .left-column {
     flex: 1 1 600px;
-    min-width: 300px;
+    max-width: 600px;
   }
   
+  /* Right Column: Contains Music Block */
   .right-column {
     flex: 0 0 360px;
-    min-width: 300px;
-    margin-top: 88px; /* Aligns with second block's top */
+    max-width: 360px;
+    margin-top: 4.5rem; /* aligns with 'currently learning' */
   }
   
-  /* Content blocks */
-  .block, .music-block {
+  /* Reusable Blocks */
+  .block,
+  .music-block {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: left;
-    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
   }
   
-  .block.wide {
-    max-width: 100%;
-  }
-  
-  /* Headings */
+  /* Section Titles */
   h1 {
     font-size: 14px;
     margin-bottom: 0.5rem;
@@ -92,14 +83,9 @@ body {
     margin: 0;
   }
   
-  /* Fade-in animation */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-  }
-  
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+  /* Music Block */
+  .music-block iframe {
+    width: 100%;
+    height: 120px;
+    border: 0;
   }
