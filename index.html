@@ -1,141 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- Bio Block -->
-  <div class="block" id="bio">
-    <div class="language-switch-container">
-      <button id="toggleLanguage">EN | 日本語</button>
-    </div>
+<main>
+  <section class="block" id="bio">
     <h1 id="bio-title">Bio</h1>
-    <p id="bio-text">Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.</p>
-    <p id="bio-info">Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. I also share some music on Bandcamp—feel free to check it out if you’re into that.</p>
-  </div>
+    <p id="bio-text">
+      <!-- unchanged -->
+    </p>
+  </section>
 
-  <!-- Currently Learning Block -->
-  <div class="block" id="currently-learning">
-    <h1 id="currently-learning-title">Currently Learning</h1>
-    <p id="currently-learning-text">🇯🇵 Japanese (N4 level, aiming for immersion)</p>
-    <p id="currently-learning-text2">💻 Front-end development (HTML / CSS / JavaScript)</p>
-    <p id="currently-learning-text3">🛠️ DIY projects (Camperbox build, Kei van restoration)</p>
-  </div>
+  <section class="block">
+    <h1 id="learning-title">currently learning</h1>
+    <ul>
+      <li id="learn-1">🇯🇵 japanese (n4 level, aiming for immersion)</li>
+      <li id="learn-2">💻 front-end development (html / css / javascript)</li>
+      <li id="learn-3">🛠️ diy projects (camperbox build, kei van restoration)</li>
+    </ul>
+  </section>
 
-  <!-- Projects Block -->
-  <div class="block" id="projects">
-    <h1 id="projects-title">Projects</h1>
-    <p id="projects-text">🚐 Kei Camperbox Plan</p>
-    <p id="projects-text2">📊 Japan Budget Tracker</p>
-    <p id="projects-text3">🌐 This Portfolio Site</p>
-  </div>
+  <section class="block">
+    <h1 id="projects-title">projects</h1>
+    <ul>
+      <li id="proj-1">🚐 Kei Camperbox Plan</li>
+      <li id="proj-2">📊 Japan Budget Tracker</li>
+      <li id="proj-3">🌐 This Portfolio Site</li>
+    </ul>
+  </section>
 
-  <!-- Contact Block -->
-  <div class="block" id="contact">
-    <h1 id="contact-title">Contact</h1>
-    <p id="contact-text">📧 <a href="mailto:your-email@example.com">Email me</a></p>
-    <p id="contact-text2">🐙 <a href="https://github.com/your-username" target="_blank">GitHub</a></p>
-  </div>
+  <section class="block">
+    <h1 id="contact-title">contact</h1>
+    <ul>
+      <li id="contact-1">📧 Email me</li>
+      <li id="contact-2">🐙 GitHub</li>
+    </ul>
+  </section>
 
-  <!-- Footer Block -->
-  <div class="footer-block">
-    <p>© 2025 Randy Boer, all rights reserved.</p>
-  </div>
-
-  <!-- JavaScript -->
-  <script>
-    const toggleLanguageButton = document.getElementById('toggleLanguage');
-
-    const translations = {
-      "bio": {
-        "en": {
-          "title": "Bio",
-          "text": "Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.",
-          "info": "Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. I also share some music on Bandcamp—feel free to check it out if you’re into that."
-        },
-        "ja": {
-          "title": "経歴",
-          "text": "私の作品を探してみてください。私はフロントエンド開発者で、クリーンで直感的なシステムを作ることに集中しています。また、フリーランスのプロジェクトも受けており、コラボレーションに興味があれば、ぜひこのウェブサイトを通じて連絡してください。",
-          "info": "仕事以外では、私は日本語を学んでいる37歳のオランダ人クリエイターです（現在N4レベル）。日本で学ぶ計画を立てています。暇な時間には、ケイバンを修復し、手作業を通じてゆっくり進歩しながら実用的なデザインに情熱を注いでいます。また、Bandcampで音楽をシェアしています。興味があればぜひチェックしてください。"
-        }
-      },
-      "currently-learning": {
-        "en": {
-          "title": "Currently Learning",
-          "text1": "🇯🇵 Japanese (N4 level, aiming for immersion)",
-          "text2": "💻 Front-end development (HTML / CSS / JavaScript)",
-          "text3": "🛠️ DIY projects (Camperbox build, Kei van restoration)"
-        },
-        "ja": {
-          "title": "現在学習中",
-          "text1": "🇯🇵 日本語（N4レベル、没入型学習を目指して）",
-          "text2": "💻 フロントエンド開発（HTML / CSS / JavaScript）",
-          "text3": "🛠️ DIYプロジェクト（キャンパーボックス作成、ケイバンの修復）"
-        }
-      },
-      "projects": {
-        "en": {
-          "title": "Projects",
-          "text1": "🚐 Kei Camperbox Plan",
-          "text2": "📊 Japan Budget Tracker",
-          "text3": "🌐 This Portfolio Site"
-        },
-        "ja": {
-          "title": "プロジェクト",
-          "text1": "🚐 ケイキャンパーボックスプラン",
-          "text2": "📊 日本の予算トラッカー",
-          "text3": "🌐 このポートフォリオサイト"
-        }
-      },
-      "contact": {
-        "en": {
-          "title": "Contact",
-          "text1": "📧 <a href=\"mailto:your-email@example.com\">Email me</a>",
-          "text2": "🐙 <a href=\"https://github.com/your-username\" target=\"_blank\">GitHub</a>"
-        },
-        "ja": {
-          "title": "連絡先",
-          "text1": "📧 <a href=\"mailto:your-email@example.com\">私にメールを送る</a>",
-          "text2": "🐙 <a href=\"https://github.com/your-username\" target=\"_blank\">GitHub</a>"
-        }
-      }
-    };
-
-    let currentLanguage = "en";
-
-    function translatePage(language) {
-      // Translate Bio
-      document.getElementById("bio-title").textContent = translations.bio[language].title;
-      document.getElementById("bio-text").textContent = translations.bio[language].text;
-      document.getElementById("bio-info").textContent = translations.bio[language].info;
-
-      // Translate Currently Learning
-      document.getElementById("currently-learning-title").textContent = translations["currently-learning"][language].title;
-      document.getElementById("currently-learning-text").textContent = translations["currently-learning"][language].text1;
-      document.getElementById("currently-learning-text2").textContent = translations["currently-learning"][language].text2;
-      document.getElementById("currently-learning-text3").textContent = translations["currently-learning"][language].text3;
-
-      // Translate Projects
-      document.getElementById("projects-title").textContent = translations.projects[language].title;
-      document.getElementById("projects-text").textContent = translations.projects[language].text1;
-      document.getElementById("projects-text2").textContent = translations.projects[language].text2;
-      document.getElementById("projects-text3").textContent = translations.projects[language].text3;
-
-      // Translate Contact
-      document.getElementById("contact-title").textContent = translations.contact[language].title;
-      document.getElementById("contact-text").innerHTML = translations.contact[language].text1;
-      document.getElementById("contact-text2").innerHTML = translations.contact[language].text2;
-    }
-
-    toggleLanguageButton.addEventListener("click", function() {
-      currentLanguage = (currentLanguage === "en") ? "ja" : "en";
-      translatePage(currentLanguage);
-
-      // Change button text
-      toggleLanguageButton.textContent = (currentLanguage === "en") ? "EN | 日本語" : "日本語 | EN";
-    });
-  </
+  <footer class="block">
+    <p id="footer-text">© 2025 Randy Boer all rights reserved.</p>
+  </footer>
+</main>
