@@ -42,29 +42,33 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 4rem; /* slight indent from the left */
-    gap: 1.2rem; /* space between blocks */
+    padding-left: 3rem; /* Slight indent from the left */
+    gap: 1.5rem; /* Space between blocks */
+    max-width: 960px; /* Restrict max width */
+    margin: 0 auto; /* Center the container horizontally */
   }
   
   /* Section blocks */
   .block {
-    background: rgba(0, 0, 0, 0.6); /* semi-transparent black block */
-    padding: 1rem 1.2rem;
-    border-radius: 5px;
-    width: 550px;
-    max-width: 90vw;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black block */
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%; /* Blocks will take up 100% of the container width */
+    max-width: 600px; /* Restrict max width for readability */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   }
   
   /* Section titles */
   h1 {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     text-transform: lowercase;
+    font-weight: bold;
   }
   
   /* Bio section */
   .bio {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
   }
   
