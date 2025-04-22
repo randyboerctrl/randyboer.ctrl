@@ -38,13 +38,16 @@ p {
   padding: 8px 12px;
   text-decoration: none;
   font-family: monospace;
-  background-color: transparent; /* Prevent layout shift */
+  background-color: transparent;
   transition: background-color 0.3s ease;
+  display: inline-block;
+  border: 1px solid transparent; /* Reserve space to avoid jump */
 }
 
 .nav-links a:hover {
   background-color: black;
-  color: white; /* keeps it white on hover */
+  color: white;
+  border: 1px solid transparent; /* Keep border the same on hover */
 }
 
 .language-switch-container {
