@@ -100,3 +100,10 @@ button {
 #toggleLanguage:focus {
   outline: none; /* Remove default focus outline */
 }
+
+body {
+  background-image: url('your-background-image.jpg'); /* Replace with your background image */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  background-position: center; /* Optional: Centers the background image */
+  background-size: cover; /* Optional: Ensures the background image covers the whole viewport */
+}
