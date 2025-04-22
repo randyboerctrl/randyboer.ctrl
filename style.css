@@ -107,9 +107,12 @@ a:visited {
 
 .footer {
   text-align: center;
-  color: white;
+  padding: 20px;
   font-family: monospace;
   font-size: 12px;
-  padding: 40px 0 20px 0;
-  opacity: 0.6;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  width: fit-content;
+  margin: 60px auto 20px auto;
 }
