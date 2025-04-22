@@ -7,6 +7,10 @@ body {
   font-size: 13px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .block {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
@@ -99,4 +103,13 @@ a:hover {
 /* Optional: override any specific a:visited colors */
 a:visited {
   color: white;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  font-size: 12px;
+  padding: 40px 0 20px 0;
+  opacity: 0.6;
 }
