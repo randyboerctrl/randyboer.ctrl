@@ -68,3 +68,14 @@ a:hover,
 a:focus {
   text-decoration: underline; /* Add underline on hover for other links */
 }
+
+.bio-content {
+  font-family: monospace, monospace;
+  margin-bottom: 1rem;
+}
+
+button {
+  margin-bottom: 1rem;
+  padding: 10px;
+  cursor: pointer;
+}

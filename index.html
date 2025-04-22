@@ -18,18 +18,31 @@
 
     <section id="bio" class="block">
       <h1>bio</h1>
-      <p>
-        Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. 
-        I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.
+      
+      <!-- Language toggle button -->
+      <button id="toggleLanguage">Switch Language</button>
+      
+      <!-- English Bio Content -->
+      <div id="bio-en" class="bio-content">
+        <p>
+          Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. 
+          I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.
 
-        Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. 
-        In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. 
-        I also share some music on Bandcamp—feel free to check it out if you’re into that.
+          Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. 
+          In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. 
+          I also share some music on Bandcamp—feel free to check it out if you’re into that.
+        </p>
+      </div>
 
-        私の仕事についてはこちらからご覧ください。フロントエンド開発を専門にしており、使いやすく、シンプルで直感的なシステムを作ることに力を入れています。フリーランスのプロジェクトも受けているので、もしご興味があれば、ぜひこのウェブサイトからご連絡ください。
-
-仕事以外では、37歳のオランダ人で、現在日本語を勉強中（N4レベル）で、日本での留学を計画しています。空いている時間には、軽バンの修復に取り組んでおり、実践的なデザインとゆっくりとした進行に魅力を感じています。また、Bandcampで音楽も公開しているので、興味があればぜひ聴いてみてください。
-      </p>
+      <!-- Japanese Bio Content (Initially hidden) -->
+      <div id="bio-jp" class="bio-content" style="display:none;">
+        <p>
+          私の仕事についてはこちらからご覧ください。フロントエンド開発を専門にしており、使いやすく、シンプルで直感的なシステムを作ることに力を入れています。フリーランスのプロジェクトも受けているので、もしご興味があれば、ぜひこのウェブサイトからご連絡ください。
+        </p>
+        <p>
+          仕事以外では、37歳のオランダ人で、現在日本語を勉強中（N4レベル）で、日本での留学を計画しています。空いている時間には、軽バンの修復に取り組んでおり、実践的なデザインとゆっくりとした進行に魅力を感じています。また、Bandcampで音楽も公開しているので、興味があればぜひ聴いてみてください。
+        </p>
+      </div>
     </section>
 
     <section id="currently-learning" class="block">
@@ -53,11 +66,28 @@
     <section id="contact" class="block">
       <h1>contact</h1>
       <p>
-        📧 <a href=mailto:“randyboer@outlook.com”>Email me</a><br>
+        📧 <a href="mailto:randyboer@outlook.com">Email me</a><br>
         🐙 <a href="https://github.com/Hiddenloops">GitHub</a>
       </p>
     </section>
 
   </div>
+
+  <script src="script.js">
+
+document.getElementById('toggleLanguage').addEventListener('click', function() {
+  const bioEn = document.getElementById('bio-en');
+  const bioJp = document.getElementById('bio-jp');
+  
+  // Toggle the visibility of the two bio sections
+  if (bioEn.style.display === "none") {
+    bioEn.style.display = "block";
+    bioJp.style.display = "none";
+  } else {
+    bioEn.style.display = "none";
+    bioJp.style.display = "block";
+  }
+});
+  </script> <!-- Link to JavaScript file -->
 </body>
 </html>
