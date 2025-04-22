@@ -21,9 +21,12 @@ html {
 .block {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  margin: 20px auto 10px auto; /* less space below */
+  margin: 20px auto;
+  width: 80%;
   max-width: 800px;
   border-radius: 8px;
+  text-align: left;
+  transform: translateX(-10%);
 }
 
 h1 {
