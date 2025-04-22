@@ -1,90 +1,57 @@
-/* General reset for the page */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and background */
 body {
-    font-family: 'Courier New', monospace;
-    background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 0;
     margin: 0;
-}
-
-/* Links at the top, centered */
-.links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 0;
-    position: absolute;
-    top: 10px;
-    width: 100%;
-    z-index: 10;
-}
-
-.link {
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0;
+    font-family: monospace;
+    font-size: 13px;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-.link:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Section styling */
-.section {
+    background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  
+  .links {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .links a {
+    display: inline-block;
     background-color: rgba(0, 0, 0, 0.7);
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 8px 16px;
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: lowercase;
+  }
+  
+  .links a:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .block {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  h1 {
     font-size: 14px;
-}
-
-/* Section headers */
-.section h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-/* Links for smooth scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .links {
-        flex-direction: column;
-    }
-
-    .link {
-        margin-bottom: 10px;
-        font-size: 12px;
-    }
-
-    .section {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .section h2 {
-        font-size: 16px;
-    }
-}
+    margin-bottom: 0.5rem;
+    text-transform: lowercase;
+  }
+  
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
