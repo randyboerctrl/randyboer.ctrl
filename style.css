@@ -10,7 +10,7 @@ body {
 .block {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  margin: 20px auto; /* Less vertical space */
+  margin: 20px auto; /* Reduced vertical space */
   max-width: 800px;
   border-radius: 8px;
 }
@@ -74,11 +74,11 @@ p {
 }
 
 .contact a {
-  color: white;
-  text-decoration: none;
-  transition: text-decoration 0.3s ease;
+  color: white; /* Make the links white */
+  text-decoration: none; /* No underline by default */
+  transition: text-decoration 0.3s ease; /* Smooth transition */
 }
 
 .contact a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
 }
