@@ -1,42 +1,98 @@
-/* Background image */
 body {
   margin: 0;
-  padding: 0;
   font-family: monospace;
-  background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
   color: white;
+  font-size: 13px;
 }
 
-/* General layout */
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* Content block style */
 .block {
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 0; /* NO rounded corners */
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  text-align: left;
+  border-radius: 0;
 }
 
-/* Toggle button */
-#toggleLanguage {
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
+h1 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-transform: lowercase;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.nav-links {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 8px;
+  margin-bottom: 24px;
+}
+
+.nav-links a {
   color: white;
+  margin: 0 10px;
+  padding: 6px 12px;
   font-family: monospace;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+  background-color: black;
+  text-decoration: none;
+}
+
+.language-switch-container {
+  text-align: right;
+  padding: 4px 20px 0 0;
+}
+
+#toggleLanguage {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-family: monospace;
   cursor: pointer;
 }
 
 #toggleLanguage:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer-block {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-family: monospace;
+  margin: 20px auto 40px auto;
+  max-width: 800px;
+  border-radius: 0;
 }
