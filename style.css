@@ -1,98 +1,84 @@
-/* General body and background */
-body {
+/* Basic reset and styling */
+* {
   margin: 0;
-  font-family: 'Monospace', monospace;
-  background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Monospace', sans-serif;
+  background: url('your-wallpaper.jpg') no-repeat center center fixed;  /* Make sure this is the correct path */
   background-size: cover;
-  color: white;
-  font-size: 13px;
+  color: #fff;
 }
 
-/* Resetting all padding/margin to make the layout consistent */
-html, body {
-  height: 100%;
-  overflow-x: hidden;
-  background-color: black; /* Fallback color */
-  scroll-behavior: smooth;
-}
-
-/* Styling for the block elements */
-.block {
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  margin: 20px auto;
-  width: 80%; /* Block centered with 80% width */
-  max-width: 800px;
-  border-radius: 8px;
-  text-align: left;
-}
-
-/* Style for all h1 headers */
-h1 {
-  font-size: 16px;
-  margin-bottom: 12px;
-  text-transform: lowercase;
-}
-
-/* Styling the p tags for better readability */
-p {
-  line-height: 1.5;
-  margin-bottom: 1em;
-}
-
-/* Styling the nav links */
 .nav-links {
-  text-align: center;
-  margin-top: 0;
-  padding-top: 8px;
-  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
 }
 
 .nav-links a {
-  color: white;
-  margin: 0 10px;
-  padding: 6px 12px;
-  font-family: monospace;
-  font-size: 13px;
   text-decoration: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  display: inline-block;
-  transition: background-color 0.2s ease;
+  color: white;
+  margin-right: 20px;
 }
 
 .nav-links a:hover {
-  background-color: black;
-  color: white;
-  border: 1px solid transparent;
+  color: #4CAF50;
 }
 
-/* Links in blocks */
-.block a {
-  color: white;
-  text-decoration: none;
-  transition: text-decoration 0.2s ease;
+/* Block layout */
+.block {
+  margin: 20px;
+  padding: 20px;
+  background-color: #000;  /* Black block background */
+  border-radius: 0;  /* No rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.block a:hover {
-  text-decoration: underline;
-}
-
-/* Styling the footer block */
 .footer-block {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #333;
   color: white;
+  padding: 10px;
   text-align: center;
-  padding: 10px 20px;
-  font-size: 12px;
-  font-family: monospace;
-  border-radius: 8px;
-  max-width: 800px;
-  margin: 20px auto;
 }
 
-.footer p {
-  margin: 0;
-  line-height: 1.2;
-  font-size: 12px;
+/* Styling for translation button */
+.translate-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.translate-btn:hover {
+  background-color: #45a049;
+}
+
+/* Hide translated text initially */
+.translation-text {
+  display: none;
+}
+
+/* General Block Content Styling */
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+/* Ensuring container layout doesn’t break */
+#bio-text-container, #currently-learning-text-container, #projects-text-container, #contact-text-container {
+  position: relative;
+  padding: 10px;
 }
