@@ -1,12 +1,14 @@
-document.getElementById('toggleLanguage').addEventListener('click', function() {
-    const bioEn = document.getElementById('bio-en');
-    const bioJp = document.getElementById('bio-jp');
-  
-    if (bioEn.style.display === "none") {
-      bioEn.style.display = "block";
-      bioJp.style.display = "none";
+// JavaScript to toggle between translation and original text
+function toggleTranslation(blockId) {
+    const textElement = document.querySelector(`#${blockId}-text`);
+    const translationElement = document.querySelector(`#${blockId}-text-translation`);
+    
+    // Toggle visibility
+    if (textElement.style.display === "none") {
+      textElement.style.display = "block";
+      translationElement.style.display = "none";
     } else {
-      bioEn.style.display = "none";
-      bioJp.style.display = "block";
+      textElement.style.display = "none";
+      translationElement.style.display = "block";
     }
-  });
+  }
