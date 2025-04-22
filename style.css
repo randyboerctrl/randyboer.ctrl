@@ -10,25 +10,23 @@ body {
 html, body {
   height: 100%;
   overflow-x: hidden;
-  background-color: black;
+  background-color: black; /* fallback for any uncovered areas */
   scroll-behavior: smooth;
 }
 
-/* ALL CONTENT BLOCKS */
+html {
+  scroll-behavior: smooth;
+}
+
 .block {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  margin: 20px auto;
+  margin: 20px 0; /* No margin left and right, auto centered */
   width: 80%;
   max-width: 800px;
   border-radius: 8px;
   text-align: left;
-}
-
-/* LEFT SHIFT ALL BLOCKS EXCEPT FOOTER */
-.block:not(.footer-block) {
-  margin-left: 10%;
-  margin-right: auto;
+  margin-left: 5%; /* Shift blocks to the left by 5% */
 }
 
 h1 {
@@ -90,7 +88,7 @@ p {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* ALL LINKS INSIDE BLOCKS */
+/* Fixes blue links in contact + applies to all block links */
 .block a {
   color: white;
   text-decoration: none;
@@ -101,6 +99,7 @@ p {
   text-decoration: underline;
 }
 
+/* Make all links white and non-underlined */
 a {
   color: white;
   text-decoration: none;
@@ -111,13 +110,13 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Optional: override any specific a:visited colors */
 a:visited {
   color: white;
 }
 
-/* FOOTER BLOCK */
 .footer-block {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); /* Same as your other blocks */
   color: white;
   text-align: center;
   padding: 10px 20px;
@@ -125,10 +124,10 @@ a:visited {
   font-family: monospace;
   border-radius: 8px;
   max-width: 800px;
-  margin: 10px auto 20px auto;
+  margin: 20px auto 40px auto;
 }
 
-.footer-block p {
-  margin: 0;
-  line-height: 1.2;
+.footer p {
+  margin: 0;                /* Remove extra space around text */
+  line-height: 1.2;         /* Compact line height */
 }
