@@ -41,10 +41,10 @@
   .container {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem; /* Reduced space between blocks */
+    gap: 0.5rem; /* Reduced space between blocks */
     max-width: 700px; /* Restrict max width */
     margin: 0 auto; /* Center the container horizontally */
-    padding-left: 2rem; /* Slight indent from the left */
+    padding-left: 1rem; /* Slight indent from the left */
     padding-right: 2rem; /* Slight indent from the right */
   }
   
@@ -61,7 +61,7 @@
   
   /* Section titles */
   h1 {
-    font-size: 1.2rem; /* Smaller font size */
+    font-size: 1rem; /* Smaller font size */
     margin-bottom: 0.8rem; /* Reduced margin */
     text-transform: lowercase;
     font-weight: bold;
