@@ -1,13 +1,11 @@
-document.getElementById('toggleLanguage').addEventListener('click', function() {
-    const bioEn = document.getElementById('bio-en');
-    const bioJp = document.getElementById('bio-jp');
-    
-    // Toggle the visibility of the two bio sections
-    if (bioEn.style.display === "none") {
-      bioEn.style.display = "block";
-      bioJp.style.display = "none";
+document.getElementById('toggleLanguage').addEventListener('click', function () {
+    const en = document.getElementById('bio-en');
+    const jp = document.getElementById('bio-jp');
+    if (en.style.display === 'none') {
+      en.style.display = 'block';
+      jp.style.display = 'none';
     } else {
-      bioEn.style.display = "none";
-      bioJp.style.display = "block";
+      en.style.display = 'none';
+      jp.style.display = 'block';
     }
   });
