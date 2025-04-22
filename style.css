@@ -84,10 +84,6 @@ button {
   cursor: pointer;
 }
 
-.container {
-  text-align: right;  /* Aligns the button to the right of the container */
-}
-
 #toggleLanguage {
   display: inline-block;  /* Keeps the button to fit the text */
   background-color: rgba(0, 0, 0, 0);  /* Transparent background */
