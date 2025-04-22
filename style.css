@@ -13,14 +13,14 @@ body {
 
 /* Prevent layout shift */
 html {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
 /* Maintain consistent font size when toggling language */
 body.japanese {
   font-family: 'Courier New', monospace; /* Ensure monospace is applied in Japanese too */
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
