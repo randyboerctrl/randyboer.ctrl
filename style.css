@@ -13,10 +13,13 @@
     color: white;
     font-size: 14px;
     line-height: 1.6;
+    padding: 0;
+    margin: 0;
   }
   
   /* MAIN WRAPPER */
   .wrapper {
+    width: 80%;  /* Adjust width to make it less wide */
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
@@ -28,12 +31,11 @@
   /* NAVIGATION */
   .nav {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    justify-content: space-between; /* Align links in one line */
+    gap: 1rem; /* Space between links */
   }
   
   .nav a {
-    display: block;
     padding: 0.75rem 1rem;
     background: rgba(0, 0, 0, 0.7);  /* Transparent background */
     color: white;
@@ -42,6 +44,9 @@
     text-transform: lowercase;
     border-radius: 4px;
     transition: background 0.3s ease;
+    display: inline-block;
+    width: auto;
+    flex-grow: 0;
   }
   
   .nav a:hover {
@@ -53,6 +58,7 @@
     background: rgba(0, 0, 0, 0.6);  /* Transparent black background */
     padding: 1.5rem;
     border-radius: 4px;
+    width: 100%;  /* Make section take up full width inside wrapper */
   }
   
   /* SECTION TITLES */
