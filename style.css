@@ -1,15 +1,21 @@
-/* ==== BASE STYLES ==== */
-body {
+/* ==== RESET ==== */
+* {
   margin: 0;
   padding: 0;
-  background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your actual image path or URL */
+  box-sizing: border-box;
+}
+
+/* ==== BODY & BACKGROUND ==== */
+body {
+  background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image path */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  color: white;
   font-family: monospace;
   text-transform: lowercase;
+  color: white;
+  line-height: 1.6;
 }
 
 /* ==== CONTAINER ==== */
@@ -36,15 +42,12 @@ body {
   font-family: monospace;
   text-transform: lowercase;
   cursor: pointer;
-  outline: none;
-  box-shadow: none;
   white-space: nowrap;
+  outline: none;
 }
 
 #toggleLanguage:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-  color: white;
-  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #toggleLanguage:focus {
@@ -68,9 +71,12 @@ body {
   text-decoration: underline;
 }
 
-/* ==== SECTION BLOCKS ==== */
+/* ==== BLOCKS FOR SECTIONS ==== */
 .block {
-  margin-bottom: 60px;
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly dark background for readability */
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 6px;
 }
 
 .block h1 {
@@ -81,14 +87,13 @@ body {
 /* ==== BIO CONTENT ==== */
 .bio-content {
   font-size: 14px;
-  line-height: 1.6;
 }
 
 /* ==== RESPONSIVE ==== */
 @media screen and (max-width: 600px) {
   .links a {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .language-switch-container {
