@@ -35,20 +35,16 @@ p {
 .nav-links a {
   color: white;
   margin: 0 12px;
+  padding: 8px 12px;
   text-decoration: none;
-  font-size: 14px;
-  text-transform: lowercase;
-  padding: 4px 8px; /* match hover state */
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
+  font-family: monospace;
+  background-color: transparent; /* Prevent layout shift */
+  transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
   background-color: black;
-  color: white; /* Keeps it white just in case */
-  text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 4px;
+  color: white; /* keeps it white on hover */
 }
 
 .language-switch-container {
