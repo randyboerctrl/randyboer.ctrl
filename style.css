@@ -85,19 +85,18 @@ button {
 }
 
 #toggleLanguage {
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0);  /* Transparent background */
+  display: inline-block;  /* Keeps the button size to fit the text */
+  background-color: rgba(0, 0, 0, 0);
   color: white;
   border: none;
-  padding: 8px 16px;
-  margin: 0 8px;
-  text-decoration: none;
-  font-size: 10px;
+  padding: 8px 16px;  /* Adjust padding to fit content */
+  margin-left: 10px;  /* Adds space between the button and the text */
+  font-size: 14px;
   font-family: monospace;
   text-transform: lowercase;
   outline: none;
   box-shadow: none;
-  text-align: center;  /* Ensures the text inside the button is centered */
+  white-space: nowrap;  /* Prevents text from wrapping inside the button */
 }
 
 #toggleLanguage:hover {
