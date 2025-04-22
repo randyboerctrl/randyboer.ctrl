@@ -27,6 +27,11 @@ html, body {
   text-align: left;
 }
 
+/* Remove rounded corners from the blocks */
+.block, .footer-block {
+  border-radius: 0px; /* Set border-radius to 0 to remove rounded corners */
+}
+
 /* Style for all h1 headers */
 h1 {
   font-size: 16px;

@@ -6,6 +6,7 @@
   <title>Personal Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Monospace&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
 
@@ -16,29 +17,49 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- Bio Block -->
   <div id="bio" class="block">
     <h1>👨‍💻 Bio</h1>
-    <p>Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.</p>
-    <p>Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. I also share some music on Bandcamp—feel free to check it out if you’re into that.</p>
+    <button onclick="toggleTranslation('bio')" class="translate-btn">Translate</button>
+    <p id="bio-text">Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.</p>
+    <p id="bio-text-translation" style="display: none;">Voel je vrij om hier mijn werk te verkennen – ik ben een front-end ontwikkelaar die zich richt op het creëren van schone, intuïtieve systemen die prettig zijn om te gebruiken. Ik neem ook freelance projecten aan, dus als je geïnteresseerd bent in samenwerking, aarzel dan niet om via deze website contact met me op te nemen.</p>
   </div>
 
+  <!-- Currently Learning Block -->
   <div id="currently-learning" class="block">
     <h1>📚 Currently Learning</h1>
-    <p>🇯🇵 Japanese (N4 level, aiming for immersion)</p>
-    <p>💻 Front-end Development (HTML / CSS / JavaScript)</p>
-    <p>🛠️ DIY Projects (Camperbox Build, Kei Van Restoration)</p>
+    <button onclick="toggleTranslation('currently-learning')" class="translate-btn">Translate</button>
+    <p id="currently-learning-text">🇯🇵 Japanese (N4 level, aiming for immersion)</p>
+    <p id="currently-learning-text-translation" style="display: none;">🇯🇵 Japans (N4 niveau, gericht op onderdompeling)</p>
+
+    <p id="currently-learning-text">💻 Front-end Development (HTML / CSS / JavaScript)</p>
+    <p id="currently-learning-text-translation" style="display: none;">💻 Front-end ontwikkeling (HTML / CSS / JavaScript)</p>
+
+    <p id="currently-learning-text">🛠️ DIY Projects (Camperbox Build, Kei Van Restoration)</p>
+    <p id="currently-learning-text-translation" style="display: none;">🛠️ Doe-het-zelf projecten (Camperbox bouwen, Kei Van restauratie)</p>
   </div>
 
+  <!-- Projects Block -->
   <div id="projects" class="block">
     <h1>🚀 Projects</h1>
-    <p>🚐 Kei Camperbox Plan</p>
-    <p>📊 Japan Budget Tracker</p>
-    <p>🌐 This Portfolio Site</p>
+    <button onclick="toggleTranslation('projects')" class="translate-btn">Translate</button>
+    <p id="projects-text">🚐 Kei Camperbox Plan</p>
+    <p id="projects-text-translation" style="display: none;">🚐 Kei Camperbox Plan</p>
+
+    <p id="projects-text">📊 Japan Budget Tracker</p>
+    <p id="projects-text-translation" style="display: none;">📊 Japan Budget Tracker</p>
+
+    <p id="projects-text">🌐 This Portfolio Site</p>
+    <p id="projects-text-translation" style="display: none;">🌐 Deze portfolio site</p>
   </div>
 
+  <!-- Contact Block -->
   <div id="contact" class="block">
     <h1>📧 Contact</h1>
-    <p>Feel free to reach out!</p>
+    <button onclick="toggleTranslation('contact')" class="translate-btn">Translate</button>
+    <p id="contact-text">Feel free to reach out!</p>
+    <p id="contact-text-translation" style="display: none;">Voel je vrij om contact op te nemen!</p>
+
     <a href="mailto:someone@example.com">Email Me</a><br>
     <a href="https://github.com">🐙 GitHub</a>
   </div>
@@ -47,6 +68,5 @@
     <p>© 2025 Randy Boer, All rights reserved.</p>
   </div>
 
-  <script src="scripts.js"></script>
 </body>
 </html>
