@@ -5,20 +5,22 @@
     box-sizing: border-box;
   }
   
-  /* Body styling */
+  /* Body */
   body {
     font-family: 'Courier New', monospace;
     background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
     background-size: cover;
     color: white;
+    padding: 2rem;
+    overflow-x: hidden;
   }
   
-  /* Top nav links */
+  /* Navigation links */
   .nav {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    padding: 2rem 1rem 1rem;
+    margin-bottom: 2rem;
   }
   
   .nav a {
@@ -35,27 +37,59 @@
     background: rgba(255, 255, 255, 0.2);
   }
   
-  /* Main container */
+  /* Container for sections */
   .container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* push blocks to the left */
-    padding: 1rem 2rem;
-    gap: 1.2rem; /* tighter spacing between blocks */
+    align-items: flex-start;
+    padding-left: 4rem; /* slight indent from the left */
+    gap: 1.2rem; /* space between blocks */
   }
   
-  /* Content blocks */
+  /* Section blocks */
   .block {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6); /* semi-transparent black block */
     padding: 1rem 1.2rem;
     border-radius: 5px;
-    width: 600px; /* less wide */
+    width: 550px;
     max-width: 90vw;
   }
   
-  /* Titles */
+  /* Section titles */
   h1 {
     font-size: 1.2rem;
     margin-bottom: 0.8rem;
     text-transform: lowercase;
+  }
+  
+  /* Bio section */
+  .bio {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Goals section */
+  .goals {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .goals p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Projects section */
+  .projects {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .projects p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Contact section */
+  .contact {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
   }
