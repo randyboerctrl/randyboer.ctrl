@@ -8,6 +8,12 @@
   display: none;
 }
 
+/* Ensuring container layout doesn’t break */
+#bio-text-container, #currently-learning-text-container, #projects-text-container, #contact-text-container {
+  position: relative;
+  padding: 10px;
+}
+
 /* Basic styling for translate button */
 .translate-btn {
   padding: 5px 10px;
@@ -22,13 +28,28 @@
   background-color: #45a049;
 }
 
-/* Ensure everything else stays as you need */
+/* Body and other styles for general layout */
 body {
   font-family: 'Monospace', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
   margin-right: 20px;
+}
+
+.block {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.footer-block {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
