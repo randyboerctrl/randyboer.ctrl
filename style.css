@@ -5,8 +5,9 @@
     box-sizing: border-box;
   }
   
+  /* BODY AND BACKGROUND */
   body {
-    font-family: monospace;
+    font-family: 'Courier New', monospace;  /* Monospace font */
     background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
     background-size: cover;
     color: white;
@@ -14,14 +15,14 @@
     line-height: 1.6;
   }
   
-  /* CONTAINER */
+  /* MAIN WRAPPER */
   .wrapper {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
   }
   
   /* NAVIGATION */
@@ -34,7 +35,7 @@
   .nav a {
     display: block;
     padding: 0.75rem 1rem;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.7);  /* Transparent background */
     color: white;
     text-decoration: none;
     text-align: center;
@@ -44,24 +45,24 @@
   }
   
   .nav a:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
   }
   
-  /* CONTENT BLOCKS */
-  .block {
-    background: rgba(0, 0, 0, 0.75);
-    padding: 1rem;
+  /* SECTION STYLES */
+  .section {
+    background: rgba(0, 0, 0, 0.6);  /* Transparent black background */
+    padding: 1.5rem;
     border-radius: 4px;
   }
   
-  /* HEADINGS */
+  /* SECTION TITLES */
   h1 {
-    font-size: 16px;
-    margin-bottom: 0.5rem;
+    font-size: 18px;
+    margin-bottom: 1rem;
     text-transform: lowercase;
   }
   
-  /* MOBILE RESPONSIVENESS (if needed in the future) */
+  /* MOBILE RESPONSIVENESS */
   @media (max-width: 600px) {
     .wrapper {
       padding: 1rem;
