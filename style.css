@@ -70,3 +70,40 @@ body {
 .copyright {
   font-size: 0.7rem;
 }
+
+/* Style for section titles */
+section h1, section h2 {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+section h1 {
+  color: #79b9f2; /* Light blue */
+}
+
+section h2 {
+  color: #8ccf55; /* Light green */
+}
+
+/* Optional: other styles for headers (for example, different colors for different sections) */
+section:nth-of-type(1) h1 {
+  color: #79b9f2; /* Light blue */
+}
+
+section:nth-of-type(2) h1 {
+  color: #f28d8d; /* Red */
+}
+
+section:nth-of-type(3) h1 {
+  color: #bb80e1; /* Purple */
+}
+
+/* Style for the content in sections (keeping it calm and readable) */
+section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+}
