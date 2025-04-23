@@ -1,7 +1,4 @@
-document.getElementById("toggleLanguage").addEventListener("click", () => {
-  document.querySelectorAll(".lang-en").forEach(el => el.classList.toggle("hidden"));
-  document.querySelectorAll(".lang-ja").forEach(el => el.classList.toggle("hidden"));
-});const toggleButton = document.getElementById('lang-toggle');
+const toggleButton = document.getElementById('lang-toggle');
 let isEnglish = true;
 
 toggleButton.addEventListener('click', () => {
@@ -16,6 +13,6 @@ toggleButton.addEventListener('click', () => {
   });
 
   japaneseTexts.forEach((text) => {
-    text.style.display = isEnglish ? 'none' : 'block';
+    text.classList.toggle('show', !isEnglish);
   });
 });
