@@ -11,63 +11,73 @@ body {
   padding: 0;
 }
 
-/* Style for section titles */
+/* Section titles (Headers) */
 section h1, section h2 {
   font-family: 'Courier New', monospace;
   font-weight: bold;
   margin-bottom: 10px;
+  color: inherit; /* Prevent color inheritance */
 }
 
-/* Light blue for the first section title */
+/* Section 1 header */
 section:nth-of-type(1) h1 {
   color: #79b9f2; /* Light blue */
 }
 
-/* Green for the second section title */
+/* Section 2 header */
 section:nth-of-type(2) h1 {
-  color: #8ccf55; /* Light green */
+  color: #8ccf55; /* Green */
 }
 
-/* Red for the third section title */
+/* Section 3 header */
 section:nth-of-type(3) h1 {
   color: #f28d8d; /* Red */
 }
 
-/* Purple for the fourth section title */
+/* Section 4 header */
 section:nth-of-type(4) h1 {
   color: #bb80e1; /* Purple */
 }
 
-/* Optional: You can customize other headers if needed (like h2, etc.) */
+/* Optional: You can customize sub-headers (h2) for each section */
 section h2 {
   color: #f1e61a; /* Yellow (can be used for sub-sections or minor headers) */
 }
 
-/* Copyright line should stay white */
+/* Copyright line should always be white */
 .copyright {
-  color: white; /* Ensure copyright text stays white */
+  color: white;
   font-size: 0.7rem;
   text-align: center;
+  margin-top: 20px; /* Space from content above */
 }
 
-/* Bio-specific styles */
+/* Bio content - text justification */
 .bio .content-en, .bio .content-ja {
-  text-align: justify; /* Justify the text */
+  text-align: justify;
   font-size: 16px;
   line-height: 1.6;
-  color: white; /* Ensuring bio text stays white */
+  color: white;
 }
 
-/* Content for each section */
+/* General section block styling */
 section {
   margin-bottom: 20px;
-  padding: 15px;
+  padding: 20px;
   background-color: black;
   color: white;
-  border-radius: 8px;
+  border-radius: 0px; /* Remove rounded corners */
 }
 
-/* Specific styles for sections */
+/* Optional: Specific padding for sections */
 section:nth-of-type(1), section:nth-of-type(2), section:nth-of-type(3), section:nth-of-type(4) {
   padding: 20px;
+}
+
+/* Optional: Control padding inside the bio section for readability */
+.bio {
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px; /* Optional rounded corners for bio only */
 }
