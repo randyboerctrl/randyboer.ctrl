@@ -5,17 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Randy Boer</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="translate-toggle" id="toggleTranslate">日本語</div>
 
   <div class="content">
-    <section class="block" data-en="Hey, thanks for stopping by! I’m a front-end developer currently diving into HTML, CSS, and JavaScript, and I’m always eager to learn more. I love building clean, intuitive systems, and I’m open to freelance projects—if it’s a good fit, I’m ready to tackle the challenge. Feel free to reach out through the site if you’re interested in collaborating.
-
-Outside of coding, I’m a 37-year-old Dutch guy learning Japanese (around N4 level) and planning to study in Japan. In my free time, I plan on restoring a kei van—mixing hands-on work with a love for practical design and steady progress. I also share some of my music on Bandcamp if you’re into that."
-      data-ja="こんにちは、訪問してくれてありがとうございます！私は現在、HTML、CSS、JavaScriptに取り組んでいるフロントエンド開発者で、いつも新しいことを学ぶことに熱心です。クリーンで直感的なシステムを作るのが大好きで、フリーランスのプロジェクトにも興味があります。もし良いフィット感があれば、挑戦する準備はできています。もしコラボレーションに興味があれば、このサイトから気軽に連絡してください。
-
-      コーディング以外では、私は37歳のオランダ人で、現在日本語を勉強中（N4レベルくらい）で、将来日本で勉強する予定です。自由時間には、軽バンの修復を計画しており、実務的なデザインと着実な進歩への愛を組み合わせています。また、もし興味があれば、私の音楽をBandcampでシェアしています。">
+    <section class="block" data-en="Hey, thanks for stopping by! ..." 
+      data-ja="こんにちは、訪問してくれてありがとうございます！...">
     </section>
 
     <section class="block" data-en="currently learning
@@ -28,9 +25,12 @@ Outside of coding, I’m a 37-year-old Dutch guy learning Japanese (around N4 le
 🛠️ DIYプロジェクト（キャンパーボックス制作、軽バン修復）">
     </section>
 
-    <section class="block" data-en="projects
-    <a href="https://solitudesystem.bandcamp.com/" target="_blank" class="music-link">
-      <i class="fa-solid fa-music"></i> <span data-i18n="my_band">My band</span>
+    <section class="block" id="projects-block">
+      <div class="block-title" data-i18n="projects_title">Projects</div>
+      <div class="block-content">
+        <p data-i18n="projects_text">I’m open to freelance projects—if it’s a good fit, I’m ready to tackle the challenge.</p>
+        <a href="https://solitudesystem.bandcamp.com/album/you-said-it-once" target="_blank" class="music-link">
+          <i class="fa-solid fa-music"></i> <span data-i18n="my_band">My band</span>
         </a>
       </div>
     </section>
