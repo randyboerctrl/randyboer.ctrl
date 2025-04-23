@@ -1,3 +1,4 @@
+/* General body and layout styles */
 body {
   background-color: #111;
   background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -10,62 +11,6 @@ body {
   padding: 0;
 }
 
-/* Bio-specific styles */
-.bio {
-  width: 100%;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6); /* Optional background to ensure visibility */
-}
-
-.bio .content-en, .bio .content-ja {
-  text-align: justify; /* Justify the text */
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0; /* Ensure no default margins interfering */
-  padding: 0; /* Ensure no default padding interfering */
-}
-
-.translate-toggle {
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  background-color: transparent;
-  color: white;
-  padding: 6px 10px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  z-index: 999;
-  font-family: 'Courier New', monospace;
-  border: none;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.translate-toggle:hover {
-  background-color: black;
-  color: white;
-}
-
-.content {
-  margin: 40px 20px;
-} 
-
-.block {
-  background-color: black;
-  padding: 12px 18px;
-  margin-bottom: 12px;
-  width: 420px;
-  max-width: 90%;
-  font-size: 0.85rem;
-  white-space: pre-line;
-  line-height: 1.5;
-}
-
-.copyright {
-  font-size: 0.7rem;
-}
-
 /* Style for section titles */
 section h1, section h2 {
   font-family: 'Courier New', monospace;
@@ -73,32 +18,56 @@ section h1, section h2 {
   margin-bottom: 10px;
 }
 
-section h1 {
-  color: #79b9f2; /* Light blue */
-}
-
-section h2 {
-  color: #8ccf55; /* Light green */
-}
-
-/* Optional: other styles for headers (for example, different colors for different sections) */
+/* Light blue for the first section title */
 section:nth-of-type(1) h1 {
   color: #79b9f2; /* Light blue */
 }
 
+/* Green for the second section title */
 section:nth-of-type(2) h1 {
+  color: #8ccf55; /* Light green */
+}
+
+/* Red for the third section title */
+section:nth-of-type(3) h1 {
   color: #f28d8d; /* Red */
 }
 
-section:nth-of-type(3) h1 {
+/* Purple for the fourth section title */
+section:nth-of-type(4) h1 {
   color: #bb80e1; /* Purple */
 }
 
-/* Style for the content in sections (keeping it calm and readable) */
+/* Optional: You can customize other headers if needed (like h2, etc.) */
+section h2 {
+  color: #f1e61a; /* Yellow (can be used for sub-sections or minor headers) */
+}
+
+/* Copyright line should stay white */
+.copyright {
+  color: white; /* Ensure copyright text stays white */
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+/* Bio-specific styles */
+.bio .content-en, .bio .content-ja {
+  text-align: justify; /* Justify the text */
+  font-size: 16px;
+  line-height: 1.6;
+  color: white; /* Ensuring bio text stays white */
+}
+
+/* Content for each section */
 section {
   margin-bottom: 20px;
   padding: 15px;
   background-color: black;
   color: white;
   border-radius: 8px;
+}
+
+/* Specific styles for sections */
+section:nth-of-type(1), section:nth-of-type(2), section:nth-of-type(3), section:nth-of-type(4) {
+  padding: 20px;
 }
