@@ -42,8 +42,6 @@ body {
   line-height: 1.5;
 }
 
-block.innerHTML = isEnglish ? ja : en;
-
 .copyright {
   font-size: 0.7rem;
 }
