@@ -49,3 +49,21 @@ body {
 .copyright {
   font-size: 0.7rem;
 }
+
+.music-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.music-link i {
+  margin-right: 6px;
+}
+
+.music-link:hover {
+  color: #bbb;
+}
