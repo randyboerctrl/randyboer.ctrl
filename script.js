@@ -1,7 +1,11 @@
-function toggleTranslation() {
-  const en = document.querySelectorAll('.en');
-  const jp = document.querySelectorAll('.jp');
+const toggleBtn = document.getElementById("lang-toggle");
+let lang = "en";
 
-  en.forEach(el => el.classList.toggle('hidden'));
-  jp.forEach(el => el.classList.toggle('hidden'));
-}
+toggleBtn.addEventListener("click", () => {
+  lang = lang === "en" ? "ja" : "en";
+  toggleBtn.textContent = lang === "en" ? "日本語" : "EN";
+
+  document.querySelectorAll("[data-en]").forEach((el) => {
+    el.textContent = el.dataset[lang];
+  });
+});
