@@ -14,19 +14,20 @@ body {
   position: fixed;
   top: 15px;
   right: 20px;
-  background-color: transparent; /* No background initially */
+  background-color: transparent; /* No background color initially */
   color: white; /* White text */
   padding: 6px 10px;
   font-size: 0.8rem;
   cursor: pointer;
   z-index: 999;
   font-family: 'Courier New', monospace;
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  border: 2px solid white; /* Optional, to give a white border when it's transparent */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 .translate-toggle:hover {
   background-color: black; /* Background becomes black on hover */
-  color: white; /* Text remains white */
+  color: white; /* Text stays white */
 }
 
 .content {
