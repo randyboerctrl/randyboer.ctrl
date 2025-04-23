@@ -1,12 +1,11 @@
-document.getElementById("toggle-lang").addEventListener("click", function () {
-  const enElements = document.querySelectorAll(".lang-en");
-  const jaElements = document.querySelectorAll(".lang-ja");
+let isJapanese = false;
 
-  enElements.forEach(el => {
-    el.style.display = el.style.display === "none" ? "block" : "none";
-  });
+function toggleLang() {
+  isJapanese = !isJapanese;
 
-  jaElements.forEach(el => {
-    el.style.display = el.style.display === "none" ? "block" : "none";
-  });
-});
+  const en = document.querySelectorAll('.lang.en');
+  const ja = document.querySelectorAll('.lang.ja');
+
+  en.forEach(el => el.style.display = isJapanese ? 'none' : 'block');
+  ja.forEach(el => el.style.display = isJapanese ? 'block' : 'none');
+}
