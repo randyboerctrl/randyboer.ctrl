@@ -9,6 +9,13 @@ body {
   padding: 0;
 }
 
+/* Bio-specific styles */
+.bio .content-en, .bio .content-ja {
+  text-align: justify; /* Justify the text */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 .translate-toggle {
   position: fixed;
   top: 15px;
@@ -46,11 +53,4 @@ body {
 
 .copyright {
   font-size: 0.7rem;
-}
-
-/* Bio-specific styles */
-.bio .content-en, .bio .content-ja {
-  text-align: justify; /* Justify the text */
-  font-size: 16px;
-  line-height: 1.6;
 }
