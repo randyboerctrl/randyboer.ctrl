@@ -11,30 +11,40 @@ body {
 }
 
 /* Bio-specific styles */
+.bio {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Optional background to ensure visibility */
+}
+
 .bio .content-en, .bio .content-ja {
-  text-align: justify; /* Justify the text only in the bio */
+  text-align: justify; /* Justify the text */
   font-size: 16px;
   line-height: 1.6;
+  margin: 0; /* Ensure no default margins interfering */
+  padding: 0; /* Ensure no default padding interfering */
 }
 
 .translate-toggle {
   position: fixed;
   top: 15px;
   right: 20px;
-  background-color: transparent; /* No background color initially */
-  color: white; /* White text */
+  background-color: transparent;
+  color: white;
   padding: 6px 10px;
   font-size: 0.8rem;
   cursor: pointer;
   z-index: 999;
   font-family: 'Courier New', monospace;
-  border: 2px solid white; /* Optional, to give a white border when it's transparent */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  border: 2px solid white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .translate-toggle:hover {
-  background-color: black; /* Background becomes black on hover */
-  color: white; /* Text stays white */
+  background-color: black;
+  color: white;
 }
 
 .content {
