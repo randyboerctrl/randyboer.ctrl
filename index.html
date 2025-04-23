@@ -1,34 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Randy Boer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <button id="toggleTranslate">EN</button>
-  
-  <div class="content">
-    <section class="block" data-en="HHey, thanks for stopping by! I’m a front-end developer currently diving into HTML, CSS, and JavaScript, and I’m always eager to learn more. I love building clean, intuitive systems, and I’m open to freelance projects—if it’s a good fit, I’m ready to tackle the challenge. Feel free to reach out through the site if you’re interested in collaborating.
 
-    Outside of coding, I’m a 37-year-old Dutch guy learning Japanese (around N4 level) and planning to study in Japan. In my free time, I plan on restoring a kei van—mixing hands-on work with a love for practical design and steady progress. I also share some of my music on Bandcamp if you’re into that."
-      data-ja="こんにちは、訪問してくれてありがとうございます！私は現在、HTML、CSS、JavaScriptに取り組んでいるフロントエンド開発者で、いつも新しいことを学ぶことに熱心です。クリーンで直感的なシステムを作るのが大好きで、フリーランスのプロジェクトにも興味があります。もし良いフィット感があれば、挑戦する準備はできています。もしコラボレーションに興味があれば、このサイトから気軽に連絡してください。
-
-      コーディング以外では、私は37歳のオランダ人で、現在日本語を勉強中（N4レベルくらい）で、将来日本で勉強する予定です。自由時間には、軽バンの修復を計画しており、実務的なデザインと着実な進歩への愛を組み合わせています。また、もし興味があれば、私の音楽をBandcampでシェアしています。">
-    </section>
-
-    <section class="block" data-en="currently learning
-🇯🇵 japanese (n4 level, aiming for immersion)
-💻 front-end development (html / css / javascript)
-🛠️ diy projects (camperbox build, kei van restoration)" 
-    data-ja="現在の学習内容
-🇯🇵 日本語（N4レベル、没入を目指して）
-💻 フロントエンド開発（HTML / CSS / JavaScript）
-🛠️ DIYプロジェクト（キャンパーボックス制作、軽バン修復）">
-    </section>
-
-    <section class="block" data-en="projects
+  <!-- Projects Block Section -->
+  <section class="block" data-en="projects
 ー Kei Camperbox Plan
 ー Japan Budget Tracker
 ー This Portfolio Site" 
@@ -36,29 +19,45 @@
 ー 軽キャンパーボックス計画
 ー 日本予算トラッカー
 ー このポートフォリオサイト">
-    </section>
+    <div class="content-en">
+      projects<br>
+      ー Kei Camperbox Plan<br>
+      ー Japan Budget Tracker<br>
+      ー This Portfolio Site
+    </div>
+    <div class="content-ja" style="display:none;">
+      プロジェクト<br>
+      ー 軽キャンパーボックス計画<br>
+      ー 日本予算トラッカー<br>
+      ー このポートフォリオサイト
+    </div>
+  </section>
 
-    <section class="block">
-      <!-- English content -->
-      <div class="content-en">
-        contact<br>
-        📧 <a href="mailto:randyboer@outlook.com">Email me</a><br>
-        🐙 <a href="https://github.com/Hiddenloops">Github</a>
-      </div>
-    
-      <!-- Japanese content -->
-      <div class="content-ja">
-        連絡先<br>
-        📧 メールで連絡<br>
-        🐙 GitHub
-      </div>
-    </section>
+  <!-- Contact Block Section -->
+  <section class="block" data-en="contact
+📧 <a href='mailto:randyboer@outlook.com'>Email me</a>
+🐙 <a href='https://github.com/Hiddenloops'>Github</a>"
+    data-ja="連絡先
+📧 メールで連絡
+🐙 GitHub">
+    <div class="content-en">
+      contact<br>
+      📧 <a href="mailto:randyboer@outlook.com">Email me</a><br>
+      🐙 <a href="https://github.com/Hiddenloops">Github</a>
+    </div>
+    <div class="content-ja" style="display:none;">
+      連絡先<br>
+      📧 メールで連絡<br>
+      🐙 GitHub
+    </div>
+  </section>
 
-    <section class="block copyright" data-en="© 2025 Randy Boer all rights reserved." 
-    data-ja="© 2025 Randy Boer 全著作権所有。">
-    </section>
-  </div>
+  <!-- Toggle Language Button -->
+  <button id="toggleTranslate">EN</button>
 
+  <!-- External JS File -->
   <script src="script.js"></script>
+
 </body>
+
 </html>
