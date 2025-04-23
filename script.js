@@ -16,7 +16,6 @@ function toggleLanguage() {
 
 toggleBtn.addEventListener("click", toggleLanguage);
 
-// Set initial state
 window.addEventListener("DOMContentLoaded", () => {
   const blocks = document.querySelectorAll(".block");
   blocks.forEach(block => {
