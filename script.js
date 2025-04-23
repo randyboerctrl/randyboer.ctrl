@@ -2,6 +2,6 @@ function toggleTranslation() {
   const en = document.querySelectorAll('.en');
   const jp = document.querySelectorAll('.jp');
 
-  en.forEach(e => e.classList.toggle('hidden'));
-  jp.forEach(j => j.classList.toggle('hidden'));
+  en.forEach(el => el.classList.toggle('hidden'));
+  jp.forEach(el => el.classList.toggle('hidden'));
 }
