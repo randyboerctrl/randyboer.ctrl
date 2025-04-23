@@ -54,7 +54,6 @@ body {
 }
 
 .block {
-  font-size: 0.9rem; /* small adjustment can go a long way */
   background-color: black;
   padding: 20px 24px; /* more internal breathing room */
   margin-bottom: 24px; /* more space between blocks */
