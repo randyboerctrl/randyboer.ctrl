@@ -1,11 +1,25 @@
-const toggleBtn = document.getElementById("lang-toggle");
-let lang = "en";
+const toggleBtn = document.getElementById("toggleTranslate");
+let isEnglish = true;
 
-toggleBtn.addEventListener("click", () => {
-  lang = lang === "en" ? "ja" : "en";
-  toggleBtn.textContent = lang === "en" ? "日本語" : "EN";
+function toggleLanguage() {
+  const blocks = document.querySelectorAll(".block");
 
-  document.querySelectorAll("[data-en]").forEach((el) => {
-    el.textContent = el.dataset[lang];
+  blocks.forEach(block => {
+    const en = block.getAttribute("data-en");
+    const ja = block.getAttribute("data-ja");
+    block.textContent = isEnglish ? ja : en;
+  });
+
+  toggleBtn.textContent = isEnglish ? "EN" : "日本語";
+  isEnglish = !isEnglish;
+}
+
+toggleBtn.addEventListener("click", toggleLanguage);
+
+// Set initial state
+window.addEventListener("DOMContentLoaded", () => {
+  const blocks = document.querySelectorAll(".block");
+  blocks.forEach(block => {
+    block.textContent = block.getAttribute("data-en");
   });
 });
