@@ -5,6 +5,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   font-family: 'Courier New', monospace;
+  text-align: justify;
   color: white;
   margin: 0;
   padding: 0;
