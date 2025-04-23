@@ -1,11 +1,7 @@
-let isJapanese = false;
+function toggleTranslation() {
+  const en = document.querySelectorAll('.en');
+  const jp = document.querySelectorAll('.jp');
 
-function toggleLang() {
-  isJapanese = !isJapanese;
-
-  const en = document.querySelectorAll('.lang.en');
-  const ja = document.querySelectorAll('.lang.ja');
-
-  en.forEach(el => el.style.display = isJapanese ? 'none' : 'block');
-  ja.forEach(el => el.style.display = isJapanese ? 'block' : 'none');
+  en.forEach(e => e.classList.toggle('hidden'));
+  jp.forEach(j => j.classList.toggle('hidden'));
 }
