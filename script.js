@@ -5,12 +5,19 @@ function toggleLanguage() {
   const blocks = document.querySelectorAll(".block");
 
   blocks.forEach(block => {
-    const en = block.getAttribute("data-en");
-    const ja = block.getAttribute("data-ja");
-    block.textContent = isEnglish ? ja : en;
+    const contentEn = block.querySelector(".content-en");
+    const contentJa = block.querySelector(".content-ja");
+    
+    if (isEnglish) {
+      contentEn.style.display = "block";
+      contentJa.style.display = "none";
+    } else {
+      contentEn.style.display = "none";
+      contentJa.style.display = "block";
+    }
   });
 
-  toggleBtn.textContent = isEnglish ? "EN" : "日本語";
+  toggleBtn.textContent = isEnglish ? "日本語" : "EN";
   isEnglish = !isEnglish;
 }
 
@@ -19,21 +26,11 @@ toggleBtn.addEventListener("click", toggleLanguage);
 window.addEventListener("DOMContentLoaded", () => {
   const blocks = document.querySelectorAll(".block");
   blocks.forEach(block => {
-    block.textContent = block.getAttribute("data-en");
+    const contentEn = block.querySelector(".content-en");
+    const contentJa = block.querySelector(".content-ja");
+
+    // Default to English content
+    contentEn.style.display = "block";
+    contentJa.style.display = "none";
   });
 });
-
-function toggleLanguage() {
-  const blocks = document.querySelectorAll(".block");
-
-  blocks.forEach(block => {
-    const en = block.getAttribute("data-en");
-    const ja = block.getAttribute("data-ja");
-    if (en && ja) {
-      block.innerHTML = isEnglish ? ja : en;
-    }
-  });
-
-  toggleBtn.textContent = isEnglish ? "EN" : "日本語";
-  isEnglish = !isEnglish;
-}
