@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: monospace;
+  font-family: monospace, monospace;
   background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
   background-size: cover;
   color: white;
@@ -17,63 +17,54 @@ html, body {
 .block {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  margin: 20px auto;
-  width: 80%;
+  margin: 20px 40px;
   max-width: 800px;
   text-align: left;
   font-family: monospace;
+  border-radius: 0;
 }
 
-h1 {
-  font-size: 16px;
-  margin-bottom: 12px;
-  text-transform: lowercase;
-  font-family: monospace;
+.block p,
+.block ul,
+.block li {
+  margin: 0 0 10px;
+  line-height: 1.6;
 }
 
 ul {
   padding-left: 20px;
-  margin: 0;
-  list-style: none;
-  line-height: 1.6;
-  font-family: monospace;
-}
-
-li::before {
-  content: '• ';
-}
-
-.language-switch-container {
-  text-align: right;
-  padding: 10px 20px 0 0;
-}
-
-#toggleLanguage {
-  background: black;
-  color: white;
-  border: 1px solid white;
-  padding: 6px 12px;
-  font-size: 12px;
-  font-family: monospace;
-  cursor: pointer;
-  text-transform: lowercase;
-}
-
-#toggleLanguage:hover {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-block {
   background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  text-align: center;
-  padding: 8px 10px;
+  text-align: left;
+  padding: 10px 40px;
   font-size: 11px;
   font-family: monospace;
+  color: white;
+  margin: 40px 0 20px 0;
   max-width: 800px;
-  margin: 20px auto 40px auto;
+}
+
+.language-switch-container {
+  text-align: right;
+  padding: 10px 40px 0 0;
+}
+
+#toggleLanguage {
+  background-color: black;
+  color: white;
+  border: none;
+  font-family: monospace;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 12px;
 }
 
 .hidden {
   display: none;
+}
+
+.lang-ja {
+  font-family: 'Noto Sans JP', sans-serif;
 }

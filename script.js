@@ -1,14 +1,4 @@
-const toggleButton = document.getElementById('toggleLanguage');
-const englishElements = document.querySelectorAll('.en');
-const japaneseElements = document.querySelectorAll('.jp');
-
-let isEnglish = true;
-
-toggleButton.addEventListener('click', () => {
-  isEnglish = !isEnglish;
-
-  englishElements.forEach(el => el.classList.toggle('hidden', !isEnglish));
-  japaneseElements.forEach(el => el.classList.toggle('hidden', isEnglish));
-
-  toggleButton.textContent = isEnglish ? '日本語' : 'English';
+document.getElementById("toggleLanguage").addEventListener("click", () => {
+  document.querySelectorAll(".lang-en").forEach(el => el.classList.toggle("hidden"));
+  document.querySelectorAll(".lang-ja").forEach(el => el.classList.toggle("hidden"));
 });
