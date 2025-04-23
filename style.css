@@ -14,13 +14,19 @@ body {
   position: fixed;
   top: 15px;
   right: 20px;
-  background-color: black;
-  color: white;
+  background-color: transparent; /* No background initially */
+  color: white; /* White text */
   padding: 6px 10px;
   font-size: 0.8rem;
   cursor: pointer;
   z-index: 999;
   font-family: 'Courier New', monospace;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.translate-toggle:hover {
+  background-color: black; /* Background becomes black on hover */
+  color: white; /* Text remains white */
 }
 
 .content {
