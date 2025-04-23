@@ -1,58 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Randy Boer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="language-switch-container">
-    <button id="toggleLanguage">English / 日本語</button>
-  </div>
 
-  <div class="block" data-key="bio">
-    <p class="lang-en">
-      Feel free to explore my work here—I’m a front-end developer focused on creating clean, intuitive systems that are a pleasure to use. I also take on freelance projects, so if you’re interested in collaborating, don’t hesitate to reach out through this website.
-      <br><br>
-      Outside of work, I’m a 37-year-old Dutch creative learning Japanese (around N4) and planning to study in Japan. In my spare time, I’m restoring a kei van, blending hands-on work with a passion for slow progress and practical design. I also share some music on Bandcamp—feel free to check it out if you’re into that.
-    </p>
-    <p class="lang-ja hidden">
-      私の仕事をここでぜひご覧ください。フロントエンド開発者として、使いやすく直感的なシステムの構築に注力しています。フリーランスのプロジェクトも受け付けていますので、興味があればお気軽にご連絡ください。
-      <br><br>
-      仕事以外では、日本語（N4レベル）を学んでいて、日本での語学留学を計画している37歳のオランダ人クリエイターです。空き時間には軽バンを修復していて、手作業のプロジェクトと実用的なデザインの進歩を楽しんでいます。Bandcampで音楽も公開しているので、興味があればぜひ聞いてみてください。
-    </p>
-  </div>
+  <div class="container">
+    <header>
+      <div class="header-content">
+        <h1>Randy Boer</h1>
+        <button id="lang-toggle" class="lang-toggle">EN/JPN</button>
+      </div>
+    </header>
 
-  <div class="block" data-key="currently">
-    <p>currently learning</p>
-    <ul>
-      <li>🇯🇵 japanese (n4 level, aiming for immersion)</li>
-      <li>💻 front-end development (html / css / javascript)</li>
-      <li>🛠️ diy projects (camperbox build, kei van restoration)</li>
-    </ul>
-  </div>
+    <!-- Bio Section -->
+    <section class="bio block">
+      <p class="lang-en">Hey, thanks for stopping by! I’m a front-end developer currently diving into HTML, CSS, and JavaScript, and I’m always eager to learn more. I love building clean, intuitive systems, and I’m open to freelance projects—if it’s a good fit, I’m ready to tackle the challenge. Feel free to reach out through the site if you’re interested in collaborating.</p>
+      <p class="lang-ja hidden">こんにちは、立ち寄っていただきありがとうございます！私は現在HTML、CSS、JavaScriptに取り組んでいるフロントエンド開発者で、常に学び続けています。私はクリーンで直感的なシステムを作るのが好きで、フリーランスのプロジェクトにもオープンです。もし良いフィット感があれば、挑戦を受け入れる準備ができています。ご興味があれば、このサイトからお気軽にご連絡ください。</p>
+      <p class="lang-en">Outside of coding, I’m a 37-year-old Dutch guy learning Japanese (around N4 level) and planning to study in Japan. In my free time, I’m restoring a kei van—mixing hands-on work with a love for practical design and steady progress. I also share some of my music on Bandcamp if you’re into that.</p>
+      <p class="lang-ja hidden">コーディング以外では、私は37歳のオランダ人で、日本語を学んでいます（N4レベル）そして、日本で勉強する予定です。暇な時間には、軽バンを修復しており、実践的なデザインと着実な進歩に対する愛情を込めて作業をしています。また、もし音楽に興味があれば、私のBandcampでいくつかの曲もシェアしています。</p>
+    </section>
 
-  <div class="block" data-key="projects">
-    <p>projects</p>
-    <ul>
-      <li>🚐 Kei Camperbox Plan</li>
-      <li>📊 Japan Budget Tracker</li>
-      <li>🌐 This Portfolio Site</li>
-    </ul>
-  </div>
+    <!-- Currently Learning Section -->
+    <section class="currently block">
+      <p class="lang-en">currently learning</p>
+      <p class="lang-ja hidden">現在学習中</p>
+      <ul>
+        <li class="lang-en">🇯🇵 japanese (n4 level, aiming for immersion)</li>
+        <li class="lang-ja hidden">🇯🇵 日本語（N4レベル、没入を目指して）</li>
+        <li class="lang-en">💻 front-end development (html / css / javascript)</li>
+        <li class="lang-ja hidden">💻 フロントエンド開発（HTML / CSS / JavaScript）</li>
+        <li class="lang-en">🛠️ diy projects (camperbox build, kei van restoration)</li>
+        <li class="lang-ja hidden">🛠️ DIYプロジェクト（キャンパーボックス作成、軽バンの修復）</li>
+      </ul>
+    </section>
 
-  <div class="block" data-key="contact">
-    <p>contact</p>
-    <ul>
-      <li>📧 Email me</li>
-      <li>🐙 GitHub</li>
-    </ul>
-  </div>
+    <!-- Projects Section -->
+    <section class="projects block">
+      <p class="lang-en">projects</p>
+      <p class="lang-ja hidden">プロジェクト</p>
+      <ul>
+        <li class="lang-en">🚐 Kei Camperbox Plan</li>
+        <li class="lang-ja hidden">🚐 軽バンキャンパーボックス計画</li>
+        <li class="lang-en">📊 Japan Budget Tracker</li>
+        <li class="lang-ja hidden">📊 日本の予算管理ツール</li>
+        <li class="lang-en">🌐 This Portfolio Site</li>
+        <li class="lang-ja hidden">🌐 このポートフォリオサイト</li>
+      </ul>
+    </section>
 
-  <footer class="footer-block">
-    <p>© 2025 Randy Boer all rights reserved.</p>
-  </footer>
+    <!-- Contact Section -->
+    <section class="contact block">
+      <p class="lang-en">contact</p>
+      <p class="lang-ja hidden">連絡先</p>
+      <ul>
+        <li class="lang-en">📧 Email me</li>
+        <li class="lang-ja hidden">📧 メール</li>
+        <li class="lang-en">🐙 GitHub</li>
+        <li class="lang-ja hidden">🐙 GitHub</li>
+      </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p class="lang-en">© 2025 Randy Boer all rights reserved.</p>
+      <p class="lang-ja hidden">© 2025 Randy Boer 全著作権所有</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
