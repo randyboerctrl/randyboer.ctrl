@@ -1,18 +1,12 @@
-const toggleButton = document.getElementById('lang-toggle');
-let isEnglish = true;
+document.getElementById("toggle-lang").addEventListener("click", function () {
+  const enElements = document.querySelectorAll(".lang-en");
+  const jaElements = document.querySelectorAll(".lang-ja");
 
-toggleButton.addEventListener('click', () => {
-  // Toggle the language
-  isEnglish = !isEnglish;
-
-  const englishTexts = document.querySelectorAll('.lang-en');
-  const japaneseTexts = document.querySelectorAll('.lang-ja');
-
-  englishTexts.forEach((text) => {
-    text.style.display = isEnglish ? 'block' : 'none';
+  enElements.forEach(el => {
+    el.style.display = el.style.display === "none" ? "block" : "none";
   });
 
-  japaneseTexts.forEach((text) => {
-    text.classList.toggle('show', !isEnglish);
+  jaElements.forEach(el => {
+    el.style.display = el.style.display === "none" ? "block" : "none";
   });
 });

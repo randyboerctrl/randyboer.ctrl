@@ -1,81 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Randy Boer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="wrapper">
+    <div class="topbar">
+      <h1>Randy Boer</h1>
+      <button id="toggle-lang">Translate</button>
+    </div>
 
-  <div class="container">
-    <header>
-      <div class="header-content">
-        <h1>Randy Boer</h1>
-        <button id="lang-toggle" class="lang-toggle">EN/JPN</button>
-      </div>
-    </header>
+    <div class="block bio">
+      <p class="lang lang-en">Hey, thanks for stopping by! I’m a front-end developer currently diving into HTML, CSS, and JavaScript, and I’m always eager to learn more. I love building clean, intuitive systems, and I’m open to freelance projects—if it’s a good fit, I’m ready to tackle the challenge. Feel free to reach out through the site if you’re interested in collaborating.</p>
+      <p class="lang lang-ja">こんにちは！私は現在HTML、CSS、JavaScriptに取り組んでいるフロントエンド開発者です。直感的でクリーンなシステムを作るのが好きで、良い相性があればフリーランス案件にも挑戦します。気軽にご連絡ください。</p>
+      <p class="lang lang-en">Outside of coding, I’m a 37-year-old Dutch guy learning Japanese (around N4 level) and planning to study in Japan. In my free time, I’m restoring a kei van—mixing hands-on work with a love for practical design and steady progress. I also share some of my music on Bandcamp if you’re into that.</p>
+      <p class="lang lang-ja">コーディング以外では、私は37歳のオランダ人で、日本語を学んでいます（N4レベル）。日本での留学を計画中です。空いた時間には軽バンをレストアしており、実用的なデザインと安定した進歩を大切にしています。音楽もBandcampで公開しています。</p>
+    </div>
 
-    <!-- Bio Section -->
-    <section class="bio block">
-      <div class="lang-block">
-        <p class="lang-en">Hey, thanks for stopping by! I’m a front-end developer currently diving into HTML, CSS, and JavaScript, and I’m always eager to learn more. I love building clean, intuitive systems, and I’m open to freelance projects—if it’s a good fit, I’m ready to tackle the challenge. Feel free to reach out through the site if you’re interested in collaborating.</p>
-        <p class="lang-ja">こんにちは、立ち寄っていただきありがとうございます！私は現在HTML、CSS、JavaScriptに取り組んでいるフロントエンド開発者で、常に学び続けています。私はクリーンで直感的なシステムを作るのが好きで、フリーランスのプロジェクトにもオープンです。もし良いフィット感があれば、挑戦を受け入れる準備ができています。ご興味があれば、このサイトからお気軽にご連絡ください。</p>
-        <p class="lang-en">Outside of coding, I’m a 37-year-old Dutch guy learning Japanese (around N4 level) and planning to study in Japan. In my free time, I’m restoring a kei van—mixing hands-on work with a love for practical design and steady progress. I also share some of my music on Bandcamp if you’re into that.</p>
-        <p class="lang-ja">コーディング以外では、私は37歳のオランダ人で、日本語を学んでいます（N4レベル）そして、日本で勉強する予定です。暇な時間には、軽バンを修復しており、実践的なデザインと着実な進歩に対する愛情を込めて作業をしています。また、もし音楽に興味があれば、私のBandcampでいくつかの曲もシェアしています。</p>
-      </div>
-    </section>
+    <div class="block learning">
+      <ul>
+        <li class="lang lang-en">🇯🇵 japanese (n4 level, aiming for immersion)</li>
+        <li class="lang lang-ja">🇯🇵 日本語（N4レベル、没入を目指して）</li>
+        <li class="lang lang-en">💻 front-end development (html / css / javascript)</li>
+        <li class="lang lang-ja">💻 フロントエンド開発（HTML / CSS / JavaScript）</li>
+        <li class="lang lang-en">🛠️ diy projects (camperbox build, kei van restoration)</li>
+        <li class="lang lang-ja">🛠️ DIYプロジェクト（キャンパーボックス作成、軽バンの修復）</li>
+      </ul>
+    </div>
 
-    <!-- Currently Learning Section -->
-    <section class="currently block">
-      <div class="lang-block">
-        <p class="lang-en">currently learning</p>
-        <p class="lang-ja">現在学習中</p>
-        <ul>
-          <li class="lang-en">🇯🇵 japanese (n4 level, aiming for immersion)</li>
-          <li class="lang-ja">🇯🇵 日本語（N4レベル、没入を目指して）</li>
-          <li class="lang-en">💻 front-end development (html / css / javascript)</li>
-          <li class="lang-ja">💻 フロントエンド開発（HTML / CSS / JavaScript）</li>
-          <li class="lang-en">🛠️ diy projects (camperbox build, kei van restoration)</li>
-          <li class="lang-ja">🛠️ DIYプロジェクト（キャンパーボックス作成、軽バンの修復）</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects block">
-      <div class="lang-block">
-        <p class="lang-en">projects</p>
-        <p class="lang-ja">プロジェクト</p>
-        <ul>
-          <li class="lang-en">🚐 Kei Camperbox Plan</li>
-          <li class="lang-ja">🚐 軽バンキャンパーボックス計画</li>
-          <li class="lang-en">📊 Japan Budget Tracker</li>
-          <li class="lang-ja">📊 日本の予算管理ツール</li>
-          <li class="lang-en">🌐 This Portfolio Site</li>
-          <li class="lang-ja">🌐 このポートフォリオサイト</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact block">
-      <div class="lang-block">
-        <p class="lang-en">contact</p>
-        <p class="lang-ja">連絡先</p>
-        <ul>
-          <li class="lang-en">📧 Email me</li>
-          <li class="lang-ja">📧 メール</li>
-          <li class="lang-en">🐙 GitHub</li>
-          <li class="lang-ja">🐙 GitHub</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Footer Section -->
     <footer>
-      <p class="lang-en">© 2025 Randy Boer all rights reserved.</p>
-      <p class="lang-ja">© 2025 Randy Boer 全著作権所有</p>
+      <p class="lang lang-en">© 2025 Randy Boer — all rights reserved.</p>
+      <p class="lang lang-ja">© 2025 ランディ・ブーア — 全著作権所有。</p>
     </footer>
   </div>
 
