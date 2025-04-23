@@ -49,12 +49,7 @@ body {
 
 .content {
   margin: 40px 20px;
-}
-
-.block::first-line {
-  color: #87CEEB; /* Light sky blue – moody and calm */
-  font-weight: bold;
-}
+} 
 
 .block {
   background-color: black;
