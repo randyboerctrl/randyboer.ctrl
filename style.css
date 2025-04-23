@@ -37,7 +37,7 @@ body {
 .block {
   background-color: black;
   padding: 12px 18px;
-  margin-bottom: 12px;
+  margin: 0 auto 24px 40px; /* Push right with left margin, increase bottom spacing */
   width: 420px;
   max-width: 90%;
   font-size: 0.85rem;
