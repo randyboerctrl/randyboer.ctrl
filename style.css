@@ -1,6 +1,7 @@
 body {
   background-color: #111;
   font-family: 'Courier New', monospace;
+  text-align: justify;
   color: white;
   margin: 0;
   padding: 0;
@@ -10,13 +11,20 @@ body {
   position: fixed;
   top: 15px;
   right: 20px;
-  background-color: black;
-  color: white;
+  background-color: transparent; /* No background color initially */
+  color: white; /* White text */
   padding: 6px 10px;
   font-size: 0.8rem;
   cursor: pointer;
   z-index: 999;
   font-family: 'Courier New', monospace;
+  border: 2px solid white; /* Optional, to give a white border when it's transparent */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.translate-toggle:hover {
+  background-color: black; /* Background becomes black on hover */
+  color: white; /* Text stays white */
 }
 
 .content {
