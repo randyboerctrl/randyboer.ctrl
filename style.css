@@ -48,20 +48,26 @@ body {
 }
 
 .content {
-  margin: 40px 20px;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
 .block {
+  font-size: 0.9rem; /* small adjustment can go a long way */
   background-color: black;
-  padding: 12px 18px;
-  margin-bottom: 12px;
-  width: 420px;
-  max-width: 90%;
-  font-size: 0.85rem;
-  white-space: pre-line;
-  line-height: 1.5;
+  padding: 20px 24px; /* more internal breathing room */
+  margin-bottom: 24px; /* more space between blocks */
+  border-radius: 6px; /* optional: soft edges help the eye relax */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* subtle depth */
 }
 
 .copyright {
   font-size: 0.7rem;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #aaa; /* subtle contrast */
 }
