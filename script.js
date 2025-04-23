@@ -1,34 +1,14 @@
 const toggleBtn = document.getElementById("toggleTranslate");
 let isEnglish = true;
 
-const translations = {
-  en: {
-    projects_title: "Projects",
-    projects_text: "I’m open to freelance projects—if it’s a good fit, I’m ready to tackle the challenge.",
-    my_band: "My band"
-  },
-  ja: {
-    projects_title: "プロジェクト",
-    projects_text: "フリーランスのプロジェクトも受け付けています。良いご縁があれば、ぜひ挑戦したいと思っています。",
-    my_band: "バンド"
-  }
-};
-
 function toggleLanguage() {
   const blocks = document.querySelectorAll(".block");
 
   blocks.forEach(block => {
     const en = block.getAttribute("data-en");
     const ja = block.getAttribute("data-ja");
-
-    if (en && ja) {
-      block.textContent = isEnglish ? ja : en;
-    }
+    block.textContent = isEnglish ? ja : en;
   });
-
-  document.querySelector('[data-i18n="projects_title"]').textContent = isEnglish ? translations.ja.projects_title : translations.en.projects_title;
-  document.querySelector('[data-i18n="projects_text"]').textContent = isEnglish ? translations.ja.projects_text : translations.en.projects_text;
-  document.querySelector('[data-i18n="my_band"]').textContent = isEnglish ? translations.ja.my_band : translations.en.my_band;
 
   toggleBtn.textContent = isEnglish ? "EN" : "日本語";
   isEnglish = !isEnglish;
@@ -39,12 +19,6 @@ toggleBtn.addEventListener("click", toggleLanguage);
 window.addEventListener("DOMContentLoaded", () => {
   const blocks = document.querySelectorAll(".block");
   blocks.forEach(block => {
-    const en = block.getAttribute("data-en");
-    if (en) block.textContent = en;
+    block.textContent = block.getAttribute("data-en");
   });
-
-  // Set default content for projects block
-  document.querySelector('[data-i18n="projects_title"]').textContent = translations.en.projects_title;
-  document.querySelector('[data-i18n="projects_text"]').textContent = translations.en.projects_text;
-  document.querySelector('[data-i18n="my_band"]').textContent = translations.en.my_band;
 });

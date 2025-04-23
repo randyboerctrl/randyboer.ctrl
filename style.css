@@ -1,51 +1,42 @@
-const toggleBtn = document.getElementById("toggleTranslate");
-let isEnglish = true;
-
-const translations = {
-  en: {
-    projects_title: "Projects",
-    projects_text: "I’m open to freelance projects—if it’s a good fit, I’m ready to tackle the challenge.",
-    my_band: "My band"
-  },
-  ja: {
-    projects_title: "プロジェクト",
-    projects_text: "フリーランスのプロジェクトも受け付けています。良いご縁があれば、ぜひ挑戦したいと思っています。",
-    my_band: "バンド"
-  }
-};
-
-function toggleLanguage() {
-  const blocks = document.querySelectorAll(".block");
-
-  blocks.forEach(block => {
-    const en = block.getAttribute("data-en");
-    const ja = block.getAttribute("data-ja");
-    if (en && ja) {
-      block.textContent = isEnglish ? ja : en;
-    }
-  });
-
-  document.querySelector('[data-i18n="projects_title"]').textContent =
-    isEnglish ? translations.ja.projects_title : translations.en.projects_title;
-  document.querySelector('[data-i18n="projects_text"]').textContent =
-    isEnglish ? translations.ja.projects_text : translations.en.projects_text;
-  document.querySelector('[data-i18n="my_band"]').textContent =
-    isEnglish ? translations.ja.my_band : translations.en.my_band;
-
-  toggleBtn.textContent = isEnglish ? "EN" : "日本語";
-  isEnglish = !isEnglish;
+body {
+  background-color: #111;
+  background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Courier New', monospace;
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
-toggleBtn.addEventListener("click", toggleLanguage);
+.translate-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  z-index: 999;
+  font-family: 'Courier New', monospace;
+}
 
-window.addEventListener("DOMContentLoaded", () => {
-  const blocks = document.querySelectorAll(".block");
-  blocks.forEach(block => {
-    const en = block.getAttribute("data-en");
-    if (en) block.textContent = en;
-  });
+.content {
+  margin: 40px 20px;
+}
 
-  document.querySelector('[data-i18n="projects_title"]').textContent = translations.en.projects_title;
-  document.querySelector('[data-i18n="projects_text"]').textContent = translations.en.projects_text;
-  document.querySelector('[data-i18n="my_band"]').textContent = translations.en.my_band;
-});
+.block {
+  background-color: black;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  width: 420px;
+  max-width: 90%;
+  font-size: 0.85rem;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+.copyright {
+  font-size: 0.7rem;
+}
