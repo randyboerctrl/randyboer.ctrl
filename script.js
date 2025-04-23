@@ -1,39 +1,6 @@
 const toggleBtn = document.getElementById("toggleTranslate");
 let isEnglish = true;
 
-function toggleLanguage() {
-  const blocks = document.querySelectorAll(".block");
-
-  blocks.forEach(block => {
-    const en = block.getAttribute("data-en");
-    const ja = block.getAttribute("data-ja");
-    block.textContent = isEnglish ? ja : en;
-  });
-
-  const translations = {
-    en: {
-      projects: "Projects",
-      // other entries
-    },
-    ja: {
-      projects: "プロジェクト",
-      // other entries
-    }
-  };
-
-  toggleBtn.textContent = isEnglish ? "EN" : "日本語";
-  isEnglish = !isEnglish;
-}
-
-toggleBtn.addEventListener("click", toggleLanguage);
-
-window.addEventListener("DOMContentLoaded", () => {
-  const blocks = document.querySelectorAll(".block");
-  blocks.forEach(block => {
-    block.textContent = block.getAttribute("data-en");
-  });
-});
-
 const translations = {
   en: {
     projects: "Projects",
@@ -48,3 +15,46 @@ const translations = {
     my_band: "バンド"
   }
 };
+
+function toggleLanguage() {
+  const lang = isEnglish ? "ja" : "en";
+
+  // Translate blocks with data-en/data-ja
+  const textBlocks = document.querySelectorAll(".block[data-en]");
+  textBlocks.forEach(block => {
+    const content = block.getAttribute(`data-${lang}`);
+    if (content) block.textContent = content;
+  });
+
+  // Translate elements with data-i18n
+  const i18nElements = document.querySelectorAll("[data-i18n]");
+  i18nElements.forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  toggleBtn.textContent = isEnglish ? "EN" : "日本語";
+  isEnglish = !isEnglish;
+}
+
+// Set default language on load
+window.addEventListener("DOMContentLoaded", () => {
+  const textBlocks = document.querySelectorAll(".block[data-en]");
+  textBlocks.forEach(block => {
+    const content = block.getAttribute("data-en");
+    if (content) block.textContent = content;
+  });
+
+  // Initial i18n population
+  const i18nElements = document.querySelectorAll("[data-i18n]");
+  i18nElements.forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations.en[key]) {
+      el.textContent = translations.en[key];
+    }
+  });
+});
+
+toggleBtn.addEventListener("click", toggleLanguage);
