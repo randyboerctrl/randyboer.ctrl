@@ -1,59 +1,79 @@
 body {
   margin: 0;
-  font-family: 'Courier New', monospace;
-  background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA==');
+  font-family: monospace;
+  background: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
   color: white;
+  font-size: 13px;
 }
 
-.content-block {
-  background-color: rgba(0, 0, 0, 0.75);
-  margin: 20px auto;
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+.block {
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  max-width: 700px;
-  border-radius: 0;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  text-align: left;
+  font-family: monospace;
 }
 
-.nav-toggle, .lang-toggle {
-  position: fixed;
-  top: 10px;
-  background: rgba(0, 0, 0, 0.7);
+h1 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-transform: lowercase;
+  font-family: monospace;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-family: monospace;
+}
+
+li::before {
+  content: '• ';
+}
+
+.language-switch-container {
+  text-align: right;
+  padding: 10px 20px 0 0;
+}
+
+#toggleLanguage {
+  background: black;
   color: white;
-  border: none;
-  font-size: 18px;
+  border: 1px solid white;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-family: monospace;
   cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-family: 'Courier New', monospace;
-  z-index: 1001;
+  text-transform: lowercase;
 }
 
-.nav-toggle { right: 10px; }
-.lang-toggle { left: 10px; }
-
-.nav-bar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 10px;
-  border-bottom-left-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transform: translateY(-100%);
-  transition: transform 0.4s ease;
-  font-family: 'Courier New', monospace;
-  z-index: 1000;
+#toggleLanguage:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.nav-bar.show {
-  transform: translateY(0);
-}
-
-a {
+.footer-block {
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  text-decoration: none;
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 11px;
+  font-family: monospace;
+  max-width: 800px;
+  margin: 20px auto 40px auto;
+}
+
+.hidden {
+  display: none;
 }
