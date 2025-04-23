@@ -10,6 +10,17 @@ function toggleLanguage() {
     block.textContent = isEnglish ? ja : en;
   });
 
+  const translations = {
+    en: {
+      projects: "Projects",
+      // other entries
+    },
+    ja: {
+      projects: "プロジェクト",
+      // other entries
+    }
+  };
+
   toggleBtn.textContent = isEnglish ? "EN" : "日本語";
   isEnglish = !isEnglish;
 }
