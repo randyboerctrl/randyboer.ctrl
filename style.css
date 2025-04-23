@@ -1,4 +1,4 @@
-/* Body styles */
+/* General body and layout styles */
 body {
   background-color: #111;
   background-image: url('https://images.unsplash.com/photo-1507010444286-828ea71bfac7?q=80&w=2953&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -11,37 +11,40 @@ body {
   padding: 0;
 }
 
-/* Section styling */
-section {
-  margin-bottom: 20px; /* Space between sections */
-  padding: 20px;
-  background-color: black; /* Section background color */
-  color: white;
-  border-radius: 0px; /* No rounded corners by default */
-  width: 80%;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+/* Section titles (Headers) */
+section h1, section h2 {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: inherit; /* Prevent color inheritance */
 }
 
-/* Section headers with different colors */
+/* Section 1 header */
 section:nth-of-type(1) h1 {
   color: #79b9f2; /* Light blue */
 }
 
+/* Section 2 header */
 section:nth-of-type(2) h1 {
   color: #8ccf55; /* Green */
 }
 
+/* Section 3 header */
 section:nth-of-type(3) h1 {
   color: #f28d8d; /* Red */
 }
 
+/* Section 4 header */
 section:nth-of-type(4) h1 {
   color: #bb80e1; /* Purple */
 }
 
-/* Copyright text - always white */
+/* Optional: You can customize sub-headers (h2) for each section */
+section h2 {
+  color: #f1e61a; /* Yellow (can be used for sub-sections or minor headers) */
+}
+
+/* Copyright line should always be white */
 .copyright {
   color: white;
   font-size: 0.7rem;
@@ -49,37 +52,32 @@ section:nth-of-type(4) h1 {
   margin-top: 20px; /* Space from content above */
 }
 
-/* Bio content text - justify alignment */
+/* Bio content - text justification */
 .bio .content-en, .bio .content-ja {
-  text-align: justify; /* Justify the text */
+  text-align: justify;
   font-size: 16px;
   line-height: 1.6;
-}
-
-/* Bio section - optional styling */
-.bio {
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 8px; /* Rounded corners for the bio section */
-}
-
-/* Optional: Styling for the translate toggle button */
-.translate-toggle {
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  background-color: transparent;
   color: white;
-  padding: 6px 10px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  z-index: 999;
-  font-family: 'Courier New', monospace;
-  border: 2px solid white;
-  transition: background-color 0.3s, color 0.3s;
 }
 
-.translate-toggle:hover {
+/* General section block styling */
+section {
+  margin-bottom: 20px;
+  padding: 20px;
   background-color: black;
   color: white;
+  border-radius: 0px; /* Remove rounded corners */
+}
+
+/* Optional: Specific padding for sections */
+section:nth-of-type(1), section:nth-of-type(2), section:nth-of-type(3), section:nth-of-type(4) {
+  padding: 20px;
+}
+
+/* Optional: Control padding inside the bio section for readability */
+.bio {
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px; /* Optional rounded corners for bio only */
 }
