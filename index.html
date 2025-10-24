@@ -1,52 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Randy Boer — Storyteller & Filmmaker</title>
-
-  <!-- Google Fonts -->
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Roboto', sans-serif; background: #0f0f0f; color: #f5f5f5; line-height: 1.6; display:flex; justify-content:center; }
-    a { color: #f5c518; text-decoration:none; }
-    .container { max-width:800px; padding:2rem; }
-
-    section { margin-bottom:2.5rem; padding:1.5rem; background: rgba(255,255,255,0.05); border-radius:12px; transition: transform 0.3s ease; }
-    section:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(245,245,245,0.1); }
-
-    h1 { font-family: 'Playfair Display', serif; font-size:2.8rem; margin-bottom:1rem; color:#f5c518; }
-    h2 { font-weight:700; margin-bottom:0.5rem; font-size:1.3rem; color:#f5c518; }
-
-    .translate-toggle { cursor:pointer; position:fixed; top:20px; right:20px; padding:0.5rem 1rem; background:#f5c518; color:#0f0f0f; border-radius:8px; font-weight:bold; transition: transform 0.2s ease; z-index:100; }
-    .translate-toggle:hover { transform: scale(1.1); }
-
-    .copyright { text-align:center; font-size:0.9rem; color:#aaa; }
-
-    .fade-in { opacity:0; transform: translateY(15px); animation: fadeInUp 0.8s forwards; }
-    .fade-delay-1 { animation-delay:0.2s; }
-    .fade-delay-2 { animation-delay:0.4s; }
-    .fade-delay-3 { animation-delay:0.6s; }
-    .fade-delay-4 { animation-delay:0.8s; }
-    .fade-delay-5 { animation-delay:1s; }
-
-    @keyframes fadeInUp { to { opacity:1; transform:translateY(0); } }
-  </style>
 </head>
 <body>
+  <!-- Language toggle -->
   <div class="translate-toggle" id="toggleTranslate">日本語</div>
 
-  <div class="container">
-    <h1 class="fade-in fade-delay-1">Randy Boer</h1>
+  <!-- Hero Section -->
+  <section class="hero" data-en="Randy Boer" data-ja="ランディ・ボーア">
+    <h1></h1>
+    <p data-en="Filmmaker | Storyteller | Creative Explorer" data-ja="映画制作 | 物語作り | 創造的探求"></p>
+  </section>
 
-    <section class="block fade-in fade-delay-2" 
-      data-en="About Me
-Hey, I’m Randy. I’m passionate about filmmaking, storytelling, and exploring creative ideas. My work experiments with visuals, narrative, and emotion, from quiet, introspective moments to bold, cinematic statements."
-      data-ja="はじめまして、ランディです。私は映画制作、物語作り、そして創造的なアイデアの探求に情熱を持っています。私の作品は静かで内省的な瞬間から、力強くシネマティックな表現まで、映像や物語、感情を実験的に追求します。">
+  <!-- Main content cards -->
+  <main class="cards">
+    <section class="card" data-en="About Me
+I’m Randy, a filmmaker and storyteller exploring visuals, narratives, and emotion. I experiment with quiet introspection and bold cinematic moments."
+             data-ja="はじめまして、ランディです。映画制作と物語作りを通じて、映像、物語、感情を探求しています。静かで内省的な表現から、力強いシネマティックな瞬間まで実験しています。">
       <h2>About Me</h2>
       <p></p>
     </section>
 
-    <section class="block fade-in fade-delay
+    <section class="card" data-en="Learning & Exploring
+ー Japanese (N4)
+ー Filmmaking techniques
+ー Writing & storytelling experiments"
+             data-ja="学習・挑戦
+ー 日本語（N4レベル）
+ー 映画制作技術
+ー 執筆・物語作りの実験">
+      <h2>Learning & Exploring</h2>
+      <p></p>
+    </section>
+
+    <section class="card" data-en="Projects & Experiments
+I explore short films, narrative ideas, and creative experiments that combine story, visuals, and emotion."
+             data-ja="プロジェクト・実験
+短編映画、物語のアイデア、ストーリー・映像・感情を組み合わせた創造的実験に取り組んでいます。">
+      <h2>Projects & Experiments</h2>
+      <p></p>
+    </section>
+
+    <section class="card" data-en="Contact
+📧 Email: randy@example.com
+🐙 GitHub: github.com/randyboerctrl"
+             data-ja="連絡先
+📧 メール: randy@example.com
+🐙 GitHub: github.com/randyboerctrl">
+      <h2>Contact</h2>
+      <p></p>
+    </section>
+  </main>
+
+  <footer data-en="© 2025 Randy Boer. All rights reserved." 
+          data-ja="© 2025 ランディ・ボーア。全著作権所有。">
+    <p></p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('toggleTranslate');
+    let isJapanese = false;
+
+    const setLanguage = () => {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const text = isJapanese ? el.dataset.ja : el.dataset.en;
+        if(el.tagName.toLowerCase() === 'p' || el.tagName.toLowerCase() === 'h1') {
+          el.textContent = text;
+        }
+      });
+    };
+
+    toggle.addEventListener('click', () => {
+      isJapanese = !isJapanese;
+      toggle.textContent = isJapanese ? 'EN' : '日本語';
+      setLanguage();
+    });
+
+    // initialize
+    setLanguage();
+  </script>
+</body>
+</html>
