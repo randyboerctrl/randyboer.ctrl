@@ -1,5 +1,14 @@
 body {
   background-color: #111;
+  font-family: 'Courier New', 'ＭＳ ゴシック', monospace; /* MS Gothic is common Japanese monospace */
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+body {
+  background-color: #111;
   font-family: 'Courier New', monospace;
   color: white;
   margin: 0;
