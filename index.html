@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Randy Boer — Storyteller & Filmmaker</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Randy Boer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Language toggle -->
   <div class="translate-toggle" id="toggleTranslate">日本語</div>
 
-  <div class="container">
-    <header>
-      <h1 data-en="Randy Boer" data-ja="ランディ・ボーア"></h1>
-      <p data-en="Filmmaker | Storyteller | Creative Explorer" data-ja="映画制作 | 物語作り | 創造的探求"></p>
-    </header>
+  <div class="content">
+    <section class="block" data-en="About me
+Hey, thanks for stopping by! I’m an aspiring filmmaker drawn to stories that explore both quiet, introspective moments and bold, powerful emotions. My work often delves into themes of connection, solitude, and the subtle tensions that lie beneath everyday life.
 
-    <section class="block" data-en="About Me
-I’m Randy, a filmmaker and storyteller exploring visuals, narratives, and emotion. I experiment with quiet introspection and bold cinematic moments."
-             data-ja="はじめまして、ランディです。映画制作と物語作りを通じて、映像、物語、感情を探求しています。静かで内省的な表現から、力強いシネマティックな瞬間まで実験しています。">
-      <h2>About Me</h2>
+I’m constantly learning and evolving in my craft, from the spark of an idea to the final cut.
+
+Outside of filmmaking, I’m studying Japanese (around N4 level) and enjoy challenges that push me creatively and personally.
+
+If you’re interested in collaborating or just want to connect, feel free to reach out."
+             data-ja="はじめまして、見てくれてありがとうございます！
+私は、静かで内省的な瞬間から力強く感情を揺さぶる物語まで、幅広いスタイルの映画作りに惹かれている映画監督志望です。私の作品は、つながりや孤独、日常生活の中に潜む微妙な緊張感といったテーマをよく扱います。
+
+アイデアの閃きから最終編集まで、常に技術を学び、成長し続けています。
+
+映画以外では、日本語を勉強していて（N4レベルくらい）、創造的にも個人的にも自分を刺激するチャレンジを楽しんでいます。
+
+もしコラボレーションに興味があったり、映画について話したい時は、気軽にご連絡ください。">
       <p></p>
     </section>
 
-    <section class="block" data-en="Learning & Exploring
-ー Japanese (N4)
-ー Filmmaking techniques
-ー Writing & storytelling experiments"
-             data-ja="学習・挑戦
-ー 日本語（N4レベル）
-ー 映画制作技術
-ー 執筆・物語作りの実験">
-      <h2>Learning & Exploring</h2>
+    <section class="block" data-en="Currently learning
+ー Japanese (N4, aiming for immersion)
+ー Filmmaking and storytelling experiments"
+             data-ja="現在の学習内容
+ー 日本語（N4レベル、没入を目指して）
+ー 映画制作・物語作りの実験">
       <p></p>
     </section>
 
     <section class="block" data-en="Projects & Experiments
-I explore short films, narrative ideas, and creative experiments that combine story, visuals, and emotion."
+ー Short films
+ー Narrative writing
+ー Creative visual experiments"
              data-ja="プロジェクト・実験
-短編映画、物語のアイデア、ストーリー・映像・感情を組み合わせた創造的実験に取り組んでいます。">
-      <h2>Projects & Experiments</h2>
+ー 短編映画
+ー 物語執筆
+ー 創造的映像実験">
       <p></p>
     </section>
 
     <section class="block" data-en="Contact
-📧 Email: randy@example.com
+📧 Email me: randy@example.com
 🐙 GitHub: github.com/randyboerctrl"
              data-ja="連絡先
 📧 メール: randy@example.com
 🐙 GitHub: github.com/randyboerctrl">
-      <h2>Contact</h2>
       <p></p>
     </section>
 
-    <footer data-en="© 2025 Randy Boer. All rights reserved."
-            data-ja="© 2025 ランディ・ボーア。全著作権所有。">
+    <section class="block copyright"
+             data-en="© 2025 Randy Boer all rights reserved."
+             data-ja="© 2025 Randy Boer 全著作権所有。">
       <p></p>
-    </footer>
+    </section>
   </div>
 
   <script>
@@ -65,11 +70,8 @@ I explore short films, narrative ideas, and creative experiments that combine st
     let isJapanese = false;
 
     const setLanguage = () => {
-      document.querySelectorAll('[data-en]').forEach(el => {
-        const text = isJapanese ? el.dataset.ja : el.dataset.en;
-        if(el.tagName.toLowerCase() === 'p' || el.tagName.toLowerCase() === 'h1') {
-          el.textContent = text;
-        }
+      document.querySelectorAll('.block').forEach(block => {
+        block.querySelector('p').textContent = isJapanese ? block.dataset.ja : block.dataset.en;
       });
     };
 
@@ -79,7 +81,7 @@ I explore short films, narrative ideas, and creative experiments that combine st
       setLanguage();
     });
 
-    // initialize
+    // Initialize
     setLanguage();
   </script>
 </body>
