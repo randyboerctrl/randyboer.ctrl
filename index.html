@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Randy Boer</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="translate-toggle" id="toggleTranslate">日本語</div>
+  <!-- Bilingual toggle -->
+  <button class="translate-toggle" id="toggleTranslate">日本語</button>
 
   <div class="content">
-    <section class="block" data-en="About me
+    <section class="block about" 
+             data-en="About me
 Hey, thanks for stopping by! I’m an aspiring filmmaker drawn to stories that explore both quiet, introspective moments and bold, powerful emotions. My work often delves into themes of connection, solitude, and the subtle tensions that lie beneath everyday life. I like creating visuals that can be subtle and thought-provoking or dynamic and intense — whatever best serves the story and mood.
 
 I’m constantly learning and evolving in my craft, from the spark of an idea to the final cut.
 
 Outside of filmmaking, I’m studying Japanese (around N4 level) and enjoy challenges that push me creatively and personally.
 
-If you’re interested in collaborating or just want to connect, feel free to reach out.
-      data-ja="はじめまして、見てくれてありがとうございます！
+If you’re interested in collaborating or just want to connect, feel free to reach out."
+             data-ja="はじめまして、見てくれてありがとうございます！
 私は、静かで内省的な瞬間から力強く感情を揺さぶる物語まで、幅広いスタイルの映画作りに惹かれている映画監督志望です。私の作品は、つながりや孤独、日常生活の中に潜む微妙な緊張感といったテーマをよく扱います。ストーリーやムードに合わせて、繊細で考えさせられる映像から、ダイナミックで迫力のある映像まで作るのが好きです。
 
 アイデアの閃きから最終編集まで、常に技術を学び、成長し続けています。
@@ -26,36 +28,28 @@ If you’re interested in collaborating or just want to connect, feel free to re
 映画以外では、日本語を勉強していて（N4レベルくらい）、創造的にも個人的にも自分を刺激するチャレンジを楽しんでいます。
 
 もしコラボレーションに興味があったり、映画について話したい時は、気軽にご連絡ください。">
-    </section>
-
-    <section class="block" data-en="currently learning
-ー japanese (n4 level, aiming for immersion)
-ー front-end development (html / css / javascript)
-    data-ja="現在の学習内容
-ー 日本語（N4レベル、没入を目指して）
-ー フロントエンド開発（HTML / CSS / JavaScript）
-ー DIYプロジェクト（キャンパーボックス制作、軽バン修復）">
-    </section>
-
-    <section class="block" data-en="projects
-ー Kei Camperbox Plan" 
-    data-ja="プロジェクト
-ー 軽キャンパーボックス計画">
-    </section>
-
-    <section class="block" data-en="contact
-📧 Email me
-🐙 GitHub" 
-    data-ja="連絡先
-📧 メールで連絡
-🐙 GitHub">
-    </section>
-
-    <section class="block copyright" data-en="© 2025 Randy Boer all rights reserved." 
-    data-ja="© 2025 Randy Boer 全著作権所有。">
+      <p></p>
     </section>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const toggle = document.getElementById('toggleTranslate');
+    let isJapanese = false;
+
+    const setLanguage = () => {
+      document.querySelectorAll('.block').forEach(block => {
+        block.querySelector('p').textContent = isJapanese ? block.dataset.ja : block.dataset.en;
+      });
+    };
+
+    toggle.addEventListener('click', () => {
+      isJapanese = !isJapanese;
+      toggle.textContent = isJapanese ? 'EN' : '日本語';
+      setLanguage();
+    });
+
+    // Initialize
+    setLanguage();
+  </script>
 </body>
 </html>
