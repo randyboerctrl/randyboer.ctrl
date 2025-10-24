@@ -3,61 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Randy Boer</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Randy Boer — Storyteller & Filmmaker</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Roboto', sans-serif; background: #0f0f0f; color: #f5f5f5; line-height: 1.6; display:flex; justify-content:center; }
+    a { color: #f5c518; text-decoration:none; }
+    .container { max-width:800px; padding:2rem; }
+
+    section { margin-bottom:2.5rem; padding:1.5rem; background: rgba(255,255,255,0.05); border-radius:12px; transition: transform 0.3s ease; }
+    section:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(245,245,245,0.1); }
+
+    h1 { font-family: 'Playfair Display', serif; font-size:2.8rem; margin-bottom:1rem; color:#f5c518; }
+    h2 { font-weight:700; margin-bottom:0.5rem; font-size:1.3rem; color:#f5c518; }
+
+    .translate-toggle { cursor:pointer; position:fixed; top:20px; right:20px; padding:0.5rem 1rem; background:#f5c518; color:#0f0f0f; border-radius:8px; font-weight:bold; transition: transform 0.2s ease; z-index:100; }
+    .translate-toggle:hover { transform: scale(1.1); }
+
+    .copyright { text-align:center; font-size:0.9rem; color:#aaa; }
+
+    .fade-in { opacity:0; transform: translateY(15px); animation: fadeInUp 0.8s forwards; }
+    .fade-delay-1 { animation-delay:0.2s; }
+    .fade-delay-2 { animation-delay:0.4s; }
+    .fade-delay-3 { animation-delay:0.6s; }
+    .fade-delay-4 { animation-delay:0.8s; }
+    .fade-delay-5 { animation-delay:1s; }
+
+    @keyframes fadeInUp { to { opacity:1; transform:translateY(0); } }
+  </style>
 </head>
 <body>
   <div class="translate-toggle" id="toggleTranslate">日本語</div>
 
-  <div class="content">
-    <section class="block" data-en="About me
-About Me
+  <div class="container">
+    <h1 class="fade-in fade-delay-1">Randy Boer</h1>
 
-Hey, thanks for stopping by! I’m an aspiring filmmaker drawn to stories that explore both quiet, reflective moments and bold, powerful emotions. I like creating visuals that can be subtle and thought-provoking or dynamic and intense — whatever best serves the story.
-
-I’m constantly learning and evolving in my craft, from the spark of an idea to the final cut.
-
-Outside of filmmaking, I’m studying Japanese (around N4 level) and enjoy challenges that push me creatively and personally.
-
-If you’re interested in collaborating or just want to connect, feel free to reach out.
-      data-ja="はじめまして、見てくれてありがとうございます！
-私は、静かで内省的な瞬間から力強く感情を揺さぶる物語まで、幅広いスタイルの映画作りに惹かれている映画監督志望です。ストーリーに最適な、繊細で考えさせられる映像や、ダイナミックで迫力のある映像を作るのが好きです。
-
-アイデアの閃きから最終編集まで、常に技術を学び、成長し続けています。
-
-映画以外では、日本語を勉強していて（N4レベルくらい）、創造的にも個人的にも自分を刺激するチャレンジを楽しんでいます。
-
-もしコラボレーションに興味があったり、映画について話したい時は、気軽にご連絡ください。">
+    <section class="block fade-in fade-delay-2" 
+      data-en="About Me
+Hey, I’m Randy. I’m passionate about filmmaking, storytelling, and exploring creative ideas. My work experiments with visuals, narrative, and emotion, from quiet, introspective moments to bold, cinematic statements."
+      data-ja="はじめまして、ランディです。私は映画制作、物語作り、そして創造的なアイデアの探求に情熱を持っています。私の作品は静かで内省的な瞬間から、力強くシネマティックな表現まで、映像や物語、感情を実験的に追求します。">
+      <h2>About Me</h2>
+      <p></p>
     </section>
 
-    <section class="block" data-en="currently learning
-ー japanese (n4 level, aiming for immersion)
-ー front-end development (html / css / javascript)
-    data-ja="現在の学習内容
-ー 日本語（N4レベル、没入を目指して）
-ー フロントエンド開発（HTML / CSS / JavaScript）
-ー DIYプロジェクト（キャンパーボックス制作、軽バン修復）">
-    </section>
-
-    <section class="block" data-en="projects
-ー Kei Camperbox Plan" 
-    data-ja="プロジェクト
-ー 軽キャンパーボックス計画">
-    </section>
-
-    <section class="block" data-en="contact
-📧 Email me
-🐙 GitHub" 
-    data-ja="連絡先
-📧 メールで連絡
-🐙 GitHub">
-    </section>
-
-    <section class="block copyright" data-en="© 2025 Randy Boer all rights reserved." 
-    data-ja="© 2025 Randy Boer 全著作権所有。">
-    </section>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    <section class="block fade-in fade-delay
