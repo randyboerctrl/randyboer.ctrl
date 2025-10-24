@@ -5,28 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Randy Boer — Storyteller & Filmmaker</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Language toggle -->
   <div class="translate-toggle" id="toggleTranslate">日本語</div>
 
-  <!-- Hero Section -->
-  <section class="hero" data-en="Randy Boer" data-ja="ランディ・ボーア">
-    <h1></h1>
-    <p data-en="Filmmaker | Storyteller | Creative Explorer" data-ja="映画制作 | 物語作り | 創造的探求"></p>
-  </section>
+  <div class="container">
+    <header>
+      <h1 data-en="Randy Boer" data-ja="ランディ・ボーア"></h1>
+      <p data-en="Filmmaker | Storyteller | Creative Explorer" data-ja="映画制作 | 物語作り | 創造的探求"></p>
+    </header>
 
-  <!-- Main content cards -->
-  <main class="cards">
-    <section class="card" data-en="About Me
+    <section class="block" data-en="About Me
 I’m Randy, a filmmaker and storyteller exploring visuals, narratives, and emotion. I experiment with quiet introspection and bold cinematic moments."
              data-ja="はじめまして、ランディです。映画制作と物語作りを通じて、映像、物語、感情を探求しています。静かで内省的な表現から、力強いシネマティックな瞬間まで実験しています。">
       <h2>About Me</h2>
       <p></p>
     </section>
 
-    <section class="card" data-en="Learning & Exploring
+    <section class="block" data-en="Learning & Exploring
 ー Japanese (N4)
 ー Filmmaking techniques
 ー Writing & storytelling experiments"
@@ -38,7 +36,7 @@ I’m Randy, a filmmaker and storyteller exploring visuals, narratives, and emot
       <p></p>
     </section>
 
-    <section class="card" data-en="Projects & Experiments
+    <section class="block" data-en="Projects & Experiments
 I explore short films, narrative ideas, and creative experiments that combine story, visuals, and emotion."
              data-ja="プロジェクト・実験
 短編映画、物語のアイデア、ストーリー・映像・感情を組み合わせた創造的実験に取り組んでいます。">
@@ -46,7 +44,7 @@ I explore short films, narrative ideas, and creative experiments that combine st
       <p></p>
     </section>
 
-    <section class="card" data-en="Contact
+    <section class="block" data-en="Contact
 📧 Email: randy@example.com
 🐙 GitHub: github.com/randyboerctrl"
              data-ja="連絡先
@@ -55,12 +53,12 @@ I explore short films, narrative ideas, and creative experiments that combine st
       <h2>Contact</h2>
       <p></p>
     </section>
-  </main>
 
-  <footer data-en="© 2025 Randy Boer. All rights reserved." 
-          data-ja="© 2025 ランディ・ボーア。全著作権所有。">
-    <p></p>
-  </footer>
+    <footer data-en="© 2025 Randy Boer. All rights reserved."
+            data-ja="© 2025 ランディ・ボーア。全著作権所有。">
+      <p></p>
+    </footer>
+  </div>
 
   <script>
     const toggle = document.getElementById('toggleTranslate');
