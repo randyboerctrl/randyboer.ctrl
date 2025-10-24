@@ -1,105 +1,114 @@
-body {
-  background-color: #111;
-  font-family: 'Courier New', 'ＭＳ ゴシック', monospace; /* MS Gothic is common Japanese monospace */
-  color: white;
-  margin: 0;
-  padding: 0;
-  text-align: justify;
-}
+  body {
+    background-color: #111;
+    font-family: 'Courier New', 'ＭＳ ゴシック', monospace; /* MS Gothic is common Japanese monospace */
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+  }
 
-.translate-toggle {
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  padding: 6px 10px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  z-index: 999;
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s;
-}
+  .translate-toggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    z-index: 999;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
 
-.translate-toggle:hover {
-  background-color: white;
-  color: black;
-}
+  .translate-toggle:hover {
+    background-color: white;
+    color: black;
+  }
 
-.content {
-  margin: 40px 20px;
-}
+  .content {
+    margin: 40px 20px;
+  }
 
-.block {
+  .block {
   background-color: black;
   padding: 16px 20px;
   margin-bottom: 24px;
-  width: 440px;
-  max-width: 90%;
+  max-width: 440px;  /* remove width: 440px */
   line-height: 1.35;
   white-space: pre-line;
   border-radius: 6px;
-}
-
-.block p {
-  margin: 0;
-}
-
-.work {
-  width: 440px;
-  max-width: 90%;
-  margin: 0 auto; /* center like About */
-}
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-
-  /* remove default spacing */
-  margin-left: 0;
+  margin-left: 0;     /* align to left inside .content */
   margin-right: 0;
 }
-.work-item {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
+
+/* WORK grid fills the block */
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;  /* single column to match block width */
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.work-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
-}
+  .block p {
+    margin: 0;
+  }
 
-.work-item:hover img {
-  transform: scale(1.05);
-}
+  .work {
+    width: 440px;
+    max-width: 90%;
+    margin: 0 auto; /* center like About */
+  }
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 
-/* Optional: overlay with title on hover */
-.work-item::after {
-  content: attr(data-title-en);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 5px;
-  font-size: 0.9em;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+    /* remove default spacing */
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .work-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
 
-.work-item:hover::after {
-  opacity: 1;
-}
+  .work-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
 
-.content {
-  max-width: 900px; /* or whatever width your About section looks good at */
-  margin: 0 auto;   /* centers the content */
-  padding: 20px;    /* optional: inner spacing */
-}
+  .work-item:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Optional: overlay with title on hover */
+  .work-item::after {
+    content: attr(data-title-en);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 5px;
+    font-size: 0.9em;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .work-item:hover::after {
+    opacity: 1;
+  }
+
+  .content {
+    max-width: 900px; /* or whatever width your About section looks good at */
+    margin: 0 auto;   /* centers the content */
+    padding: 20px;    /* optional: inner spacing */
+  }
