@@ -43,44 +43,7 @@
   margin-right: 0;
 }
 
-/* WORK grid fills the block */
-.work-grid {
-  display: grid;
-  grid-template-columns: 1fr;  /* single column to match block width */
-  gap: 20px;
-  margin-top: 20px;
-}
 
-  .block p {
-    margin: 0;
-  }
-
-  .work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-
-    /* remove default spacing */
-    margin-left: 100;
-    margin-right: 0;
-  }
-  .work-item {
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-  }
-
-  .work-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-
-  .work-item:hover img {
-    transform: scale(1.05);
-  }
 
   /* Optional: overlay with title on hover */
   .work-item::after {
